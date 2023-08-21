@@ -1,0 +1,18 @@
+export default {
+  chat: require('../assets/chat.png'),
+  facebook: require('../assets/facebook.png'),
+  mail: require('../assets/mail.png'),
+  talk: require('../assets/talk.png'),
+  information: require('../assets/information.png'),
+  upload: require('../assets/upload.png'),
+  heart: require('../assets/heart.png'),
+  back: require('../assets/back.png'),
+  individual: require('../assets/individual.png'),
+  moon: require('../assets/moon.png'),
+  help: require('../assets/help.png'),
+  information: require('../assets/information.png'),
+  default: require('../assets/default.png'),
+  info: require('../assets/info.png'),
+  right: require('../assets/right.png'),
+  google: require('../assets/google.png'),
+};
