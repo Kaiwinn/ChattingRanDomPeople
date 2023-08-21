@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "966244274464",
+    "project_id": "chattingrandompeople",
+    "storage_bucket": "chattingrandompeople.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966244274464:android:19965c0a95544cc6c58745",
+        "android_client_info": {
+          "package_name": "com.chattingrandompeople"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966244274464-75nhc48umrdronhqfg04s531ir105jfb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chattingrandompeople",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "966244274464-0o900ug0jbv93l206uks27qnc3ht4ijh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA00FDnSdxhmGsCQ1Ej0VaqHXACc40IoRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966244274464-0o900ug0jbv93l206uks27qnc3ht4ijh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "966244274464-d5jr56oe5kjb37jonsub1tj80bfjc3ff.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chattingrandompeople"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
