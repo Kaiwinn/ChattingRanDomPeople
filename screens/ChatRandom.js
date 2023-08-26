@@ -69,13 +69,13 @@ const ChatRandom = props => {
 
         <Text
           style={{
-            fontSize: 18,
-            fontWeight: 'bold',
+            fontSize: 16,
+            fontWeight: '500',
             color: '#0c0c0c',
             marginStart: 5,
             flex: 1,
           }}>
-          Chat với người lạ
+          Chỉnh sửa biệt danh
         </Text>
         <TouchableOpacity onPress={() => navigate('Information')}>
           <Image
