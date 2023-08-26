@@ -88,20 +88,94 @@ const Information = props => {
       <View
         style={{
           flex: 1,
+          marginTop: 10,
         }}>
         {options.map((item, index) => (
           <View
             key={index}
             style={{
-              marginTop: 12,
-              height: screenHeight * 0.088,
-              backgroundColor: 'yellow',
+              borderBottomWidth: 0.2, // Độ dày của viền dưới
+              borderBottomColor: '#b7b7b7',
+              marginTop: 8,
+              marginBottom: 8,
+              height: screenHeight * 0.068,
               flexDirection: 'row',
               alignItems: 'center',
             }}>
-            <Text></Text>
+            <Text
+              style={{
+                flex: 1,
+                marginHorizontal: 16,
+                color: '#2b2b2b',
+                fontSize: 15,
+              }}>
+              {item.name}
+            </Text>
+            <Text
+              style={{
+                marginHorizontal: 16,
+                color: '#2b2b2b',
+                fontSize: 15,
+              }}>
+              {item.value}
+            </Text>
           </View>
         ))}
+
+        <View
+          style={{
+            marginTop: 5,
+            height: screenHeight * 0.068,
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            marginHorizontal: 15,
+            marginTop: 8,
+            marginBottom: 8,
+            flexDirection: 'row',
+          }}>
+          <View
+            style={{
+              height: screenHeight * 0.06,
+              paddingHorizontal: 5,
+              borderWidth: 1, // Độ dày của viền dưới
+              borderColor: '#961696',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 5,
+            }}>
+            <Text
+              style={{
+                marginHorizontal: 17,
+                color: '#961696',
+                fontSize: 15,
+                fontWeight: '400',
+              }}>
+              Báo Xấu
+            </Text>
+          </View>
+          <View style={{flex: 1}}></View>
+          <View
+            style={{
+              height: screenHeight * 0.06,
+              paddingHorizontal: 5,
+              borderWidth: 1, // Độ dày của viền dưới
+              borderColor: '#961696',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 5,
+              marginHorizontal: 15,
+            }}>
+            <Text
+              style={{
+                marginHorizontal: 17,
+                color: '#961696',
+                fontSize: 15,
+                fontWeight: '400',
+              }}>
+              Chặn
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
   );

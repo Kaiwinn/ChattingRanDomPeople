@@ -15,4 +15,8 @@ export default {
   info: require('../assets/info.png'),
   right: require('../assets/right.png'),
   google: require('../assets/google.png'),
+  edit: require('../assets/edit.png'),
+  add_image: require('../assets/add-image.png'),
+  bookmark: require('../assets/bookmark.png'),
+  exit: require('../assets/exit.png'),
 };
