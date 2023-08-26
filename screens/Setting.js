@@ -126,7 +126,7 @@ const Setting = props => {
             height: screenHeight * 0.58,
           }}>
           {options.map((item, index) => (
-            <View>
+            <View key={index}>
               <View
                 style={{
                   height: screenHeight * 0.08,

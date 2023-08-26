@@ -13,6 +13,7 @@ MERGED from [:react-native-fbsdk-next] D:\reactnative\ChattingRanDomPeople\node_
 MERGED from [:react-native-gesture-handler] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-screens] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-splash-screen] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.72.4] C:\Users\TTC\.gradle\caches\transforms-3\b7d27cbcd2801365f4838d1426c9e50e\transformed\jetified-react-android-0.72.4-debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.android:facebook-android-sdk:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\8209f98567b429800ddeb2971946d787\transformed\jetified-facebook-android-sdk-15.2.0\AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-login:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\28d5f8659ed4790706746c2ce3c34d5d\transformed\jetified-facebook-login-15.2.0\AndroidManifest.xml:9:1-19:12
@@ -294,6 +295,8 @@ MERGED from [:react-native-safe-area-context] D:\reactnative\ChattingRanDomPeopl
 MERGED from [:react-native-safe-area-context] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-splash-screen] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-splash-screen] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.72.4] C:\Users\TTC\.gradle\caches\transforms-3\b7d27cbcd2801365f4838d1426c9e50e\transformed\jetified-react-android-0.72.4-debug\AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.72.4] C:\Users\TTC\.gradle\caches\transforms-3\b7d27cbcd2801365f4838d1426c9e50e\transformed\jetified-react-android-0.72.4-debug\AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.android:facebook-android-sdk:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\8209f98567b429800ddeb2971946d787\transformed\jetified-facebook-android-sdk-15.2.0\AndroidManifest.xml:12:5-14:41

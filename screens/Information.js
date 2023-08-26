@@ -91,9 +91,11 @@ const Information = props => {
         }}>
         {options.map((item, index) => (
           <View
+            key={index}
             style={{
+              marginTop: 12,
               height: screenHeight * 0.088,
-              backgroundColor: 'red',
+              backgroundColor: 'yellow',
               flexDirection: 'row',
               alignItems: 'center',
             }}>

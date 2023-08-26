@@ -7,14 +7,33 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {images} from '../constants';
+import AnimatedHeart from '../components/animated/AnimatedHeart';
+import SplashScreen from 'react-native-splash-screen';
+
+function getUniqueID() {
+  return Math.floor(Math.random() * Date.now()).toString();
+}
 
 const ChatRandom = props => {
   const {navigation, route} = props;
   const {navigate, goBack} = navigation;
   const screenWidth = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
+
+  const [hearts, setHearts] = useState([]);
+
+  const handleCompleteAnimation = useCallback(id => {
+    setHearts(oldHearts => {
+      return oldHearts.filter(heart => heart.id !== id);
+    });
+  }, []);
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <View
       style={{
@@ -62,10 +81,11 @@ const ChatRandom = props => {
           <Image
             source={images.information}
             style={{
-              height: screenHeight * 0.045,
-              width: screenHeight * 0.045,
+              height: screenHeight * 0.04,
+              width: screenHeight * 0.04,
               marginHorizontal: 15,
-              tintColor: '#2479c9',
+              marginVertical: 5,
+              tintColor: '#a00070',
             }}
           />
         </TouchableOpacity>
@@ -104,6 +124,15 @@ const ChatRandom = props => {
           Tap 2 lần để {'<3'}
         </Text>
       </View>
+      {hearts.map(item => (
+        <AnimatedHeart
+          key={item.id}
+          onCompleteAnimation={handleCompleteAnimation}
+          id={item.id}
+          delay={item.delay}
+          size={item.size}
+        />
+      ))}
       <View
         style={{
           height: screenHeight * 0.086,
@@ -113,9 +142,10 @@ const ChatRandom = props => {
         <Image
           source={images.upload}
           style={{
-            height: screenHeight * 0.038,
-            width: screenHeight * 0.038,
+            height: screenHeight * 0.033,
+            width: screenHeight * 0.033,
             marginHorizontal: 15,
+            tintColor: '#600545',
           }}
         />
         <TextInput
@@ -128,18 +158,32 @@ const ChatRandom = props => {
             backgroundColor: '#f2f2f2',
             fontSize: 16,
             fontWeight: '400',
+            marginBottom: 3,
+            marginTop: 3,
           }}
           placeholder="Nhập tin nhắn..."
           placeholderTextColor="#727272"
         />
-        <Image
-          source={images.heart}
-          style={{
-            height: screenHeight * 0.038,
-            width: screenHeight * 0.038,
-            marginHorizontal: 15,
-          }}
-        />
+        <TouchableOpacity
+          onPress={() => {
+            const numHeartsToAdd = 18; // Số lượng trái tim bạn muốn thêm
+            const newHearts = Array.from({length: numHeartsToAdd}, () => ({
+              id: getUniqueID(),
+              delay: Math.random() * 3100, // Độ trễ ngẫu nhiên từ 0ms đến 2000ms
+              size: (Math.floor(Math.random() * 10) + 1) * 2,
+            }));
+            setHearts([...hearts, ...newHearts]);
+          }}>
+          <Image
+            source={images.heart}
+            style={{
+              height: screenHeight * 0.038,
+              width: screenHeight * 0.038,
+              marginHorizontal: 15,
+              tintColor: '#ff00b2',
+            }}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

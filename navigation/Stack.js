@@ -9,7 +9,7 @@ const Stack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Login"
+        initialRouteName="ChatRandom"
         screenOptions={{
           headerShown: false,
         }}>

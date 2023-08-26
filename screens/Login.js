@@ -10,6 +10,8 @@ import {
   Platform,
   TextInput,
 } from 'react-native';
+
+import SplashScreen from 'react-native-splash-screen';
 import React, {useEffect, useState} from 'react';
 import {images} from '../constants';
 import {LoginManager, AccessToken, Profile} from 'react-native-fbsdk-next';
@@ -51,17 +53,8 @@ const Login = props => {
     });
   };
 
-  const handleLoginGoogle = async () => {
-    try {
-      await GoogleSignin.hasPlayServices();
-      const userInfo = await GoogleSignin.signIn();
-      console.log(userInfo);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    SplashScreen.hide();
     GoogleSignin.configure({
       webClientId: CLI_ID_GOOGLE,
     });
@@ -88,7 +81,7 @@ const Login = props => {
         style={{
           height: screenHeight,
           width: screenWidth,
-          backgroundColor: '#1877d3',
+          backgroundColor: '#f2a4cf',
         }}>
         <View
           style={{
@@ -119,7 +112,7 @@ const Login = props => {
         </View>
         <View
           style={{
-            marginTop: 15,
+            marginTop: 35,
             height: screenHeight * 0.13,
             justifyContent: 'center',
             alignItems: 'center',
@@ -191,44 +184,6 @@ const Login = props => {
                     fontWeight: 'bold',
                   }}>
                   Đăng nhập bằng Facebook
-                </Text>
-              </View>
-            </TouchableWithoutFeedback>
-
-            <TouchableWithoutFeedback onPress={handleLoginGoogle}>
-              <View
-                style={{
-                  marginTop: 15,
-                  height: screenHeight * 0.069,
-                  backgroundColor: '#d6fcfc',
-                  borderRadius: 5,
-                  shadowColor: 'black',
-                  shadowOffset: {
-                    width: 0,
-                    height: 3,
-                  },
-                  shadowOpacity: 0.3,
-                  shadowRadius: 4,
-                  elevation: 5,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  source={images.google}
-                  style={{
-                    height: screenHeight * 0.041,
-                    width: screenHeight * 0.041,
-                    marginStart: 20,
-                  }}
-                />
-                <Text
-                  style={{
-                    marginStart: 16,
-                    color: '#1e1e1e',
-                    fontSize: 15,
-                    fontWeight: 'bold',
-                  }}>
-                  Đăng nhập bằng Google
                 </Text>
               </View>
             </TouchableWithoutFeedback>
@@ -309,7 +264,6 @@ const Login = props => {
                   fontWeight: '400',
                 }}
                 placeholder="abcxyz@gmail.com"
-                value="cn764011@gmail.com"
                 placeholderTextColor="#727272"
                 onChangeText={email => {
                   setEmail(email);
