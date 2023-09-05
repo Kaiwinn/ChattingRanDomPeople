@@ -8,6 +8,7 @@ MERGED from D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidMani
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\fa4839ee70dd65c1f98b393270c37d62\transformed\jetified-flipper-network-plugin-0.182.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\e383c89f04554cdd82097fdbdb2c6e3b\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:8:1-18:12
+MERGED from [:react-native-async-storage_async-storage] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-google-signin_google-signin] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-fbsdk-next] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-fbsdk-next\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:1-26:12
 MERGED from [:react-native-gesture-handler] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -285,6 +286,8 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\TTC\.g
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\e383c89f04554cdd82097fdbdb2c6e3b\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-async-storage_async-storage] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-google-signin_google-signin] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-google-signin_google-signin] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-fbsdk-next] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-fbsdk-next\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:5-44

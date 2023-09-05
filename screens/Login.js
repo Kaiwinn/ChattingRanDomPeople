@@ -16,7 +16,6 @@ import React, {useEffect, useState} from 'react';
 import {images} from '../constants';
 import {LoginManager, AccessToken, Profile} from 'react-native-fbsdk-next';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import {firebase} from '../firebase/firebase';
 
 export const CLI_ID_GOOGLE =
   Platform.OS == 'ios'
@@ -65,16 +64,6 @@ const Login = props => {
     handleCodeInApp: true,
   };
 
-  const registerUser = async email => {
-    try {
-      await firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
-      alert('Chúng tôi đã gửi một liên kết đăng nhập đến email của bạn.');
-    } catch (error) {
-      console.error('Lỗi khi gửi liên kết đăng nhập:', error);
-      alert('Có lỗi xảy ra khi gửi liên kết đăng nhập.');
-    }
-  };
-
   return (
     <SafeAreaView>
       <View
@@ -95,7 +84,7 @@ const Login = props => {
               marginBottom: 20,
               height: 150,
               width: 150,
-              tintColor: '#ffffff',
+              // tintColor: '#ffffff',
             }}
           />
           <Text
@@ -148,12 +137,12 @@ const Login = props => {
               height: screenHeight * 0.19,
               paddingHorizontal: 35,
               paddingVertical: 5,
-              marginTop: 16,
+              marginTop: 30,
             }}>
             <TouchableWithoutFeedback onPress={handleLoginFacebook}>
               <View
                 style={{
-                  height: screenHeight * 0.069,
+                  height: screenHeight * 0.067,
                   backgroundColor: '#4068b5',
                   borderRadius: 5,
                   shadowColor: 'black',
@@ -170,8 +159,8 @@ const Login = props => {
                 <Image
                   source={images.facebook}
                   style={{
-                    height: screenHeight * 0.041,
-                    width: screenHeight * 0.041,
+                    height: screenHeight * 0.039,
+                    width: screenHeight * 0.039,
                     marginStart: 20,
                     tintColor: '#ffffff',
                   }}
@@ -182,6 +171,7 @@ const Login = props => {
                     color: '#ffffff',
                     fontSize: 15,
                     fontWeight: 'bold',
+                    letterSpacing: 0.8,
                   }}>
                   Đăng nhập bằng Facebook
                 </Text>
@@ -195,7 +185,7 @@ const Login = props => {
               <View
                 style={{
                   marginTop: 15,
-                  height: screenHeight * 0.069,
+                  height: screenHeight * 0.067,
                   backgroundColor: '#ededed',
                   borderRadius: 5,
                   shadowColor: 'black',
@@ -212,8 +202,8 @@ const Login = props => {
                 <Image
                   source={images.mail}
                   style={{
-                    height: screenHeight * 0.041,
-                    width: screenHeight * 0.041,
+                    height: screenHeight * 0.039,
+                    width: screenHeight * 0.039,
                     marginStart: 20,
                     tintColor: '#1e1e1e',
                   }}
@@ -224,6 +214,7 @@ const Login = props => {
                     color: '#1e1e1e',
                     fontSize: 15,
                     fontWeight: 'bold',
+                    letterSpacing: 0.8,
                   }}>
                   Đăng nhập bằng Email
                 </Text>
@@ -288,7 +279,8 @@ const Login = props => {
                 }}>
                 Quay Lại
               </Text>
-              <TouchableWithoutFeedback onPress={() => registerUser(email)}>
+              <TouchableWithoutFeedback
+                onPress={() => navigate('OTPLoginWithEmail', {email: email})}>
                 <Text
                   style={{
                     fontSize: 15,
@@ -327,7 +319,7 @@ const Login = props => {
         </Text>
         <Text
           style={{
-            marginTop: 50,
+            marginTop: 48,
             textAlign: 'center',
             color: 'white',
             fontSize: 18,

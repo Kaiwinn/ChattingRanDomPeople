@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import React, {useState} from 'react';
-import {images} from '../constants';
+import {colors, images} from '../constants';
 
 const Information = props => {
   const {navigation, route} = props;
@@ -43,12 +43,12 @@ const Information = props => {
       style={{
         height: screenHeight,
         width: screenWidth,
-        backgroundColor: '#f2f2f2',
+        backgroundColor: colors.light.background,
       }}>
       <View
         style={{
           height: screenHeight * 0.086,
-          backgroundColor: '#f2f2f2',
+          backgroundColor: colors.light.background,
           shadowColor: '#7c7c7c',
           shadowOffset: {
             width: 0,
@@ -67,9 +67,10 @@ const Information = props => {
           <Image
             source={images.back}
             style={{
-              height: screenHeight * 0.033,
-              width: screenHeight * 0.033,
+              height: screenHeight * 0.032,
+              width: screenHeight * 0.032,
               marginHorizontal: 15,
+              tintColor: colors.light.infoColor,
             }}
           />
         </TouchableOpacity>
@@ -78,7 +79,7 @@ const Information = props => {
           style={{
             fontSize: 18,
             fontWeight: 'bold',
-            color: '#0c0c0c',
+            color: colors.light.textColorTitle,
             marginStart: 5,
             flex: 1,
           }}>
@@ -108,14 +109,15 @@ const Information = props => {
                 marginHorizontal: 16,
                 color: '#2b2b2b',
                 fontSize: 15,
+                color: colors.light.infoColor,
               }}>
               {item.name}
             </Text>
             <Text
               style={{
                 marginHorizontal: 16,
-                color: '#2b2b2b',
                 fontSize: 15,
+                color: colors.light.iconSettings,
               }}>
               {item.value}
             </Text>
@@ -138,7 +140,7 @@ const Information = props => {
               height: screenHeight * 0.06,
               paddingHorizontal: 5,
               borderWidth: 1, // Độ dày của viền dưới
-              borderColor: '#961696',
+              borderColor: colors.light.report,
               justifyContent: 'center',
               alignItems: 'center',
               borderRadius: 5,
@@ -146,7 +148,7 @@ const Information = props => {
             <Text
               style={{
                 marginHorizontal: 17,
-                color: '#961696',
+                color: colors.light.report,
                 fontSize: 15,
                 fontWeight: '400',
               }}>
@@ -159,7 +161,7 @@ const Information = props => {
               height: screenHeight * 0.06,
               paddingHorizontal: 5,
               borderWidth: 1, // Độ dày của viền dưới
-              borderColor: '#961696',
+              borderColor: colors.light.report,
               justifyContent: 'center',
               alignItems: 'center',
               borderRadius: 5,
@@ -168,7 +170,7 @@ const Information = props => {
             <Text
               style={{
                 marginHorizontal: 17,
-                color: '#961696',
+                color: colors.light.report,
                 fontSize: 15,
                 fontWeight: '400',
               }}>

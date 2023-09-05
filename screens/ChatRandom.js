@@ -11,7 +11,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import React, {useCallback, useEffect, useState} from 'react';
-import {images} from '../constants';
+import {colors, images} from '../constants';
 import AnimatedHeart from '../components/animated/AnimatedHeart';
 import SplashScreen from 'react-native-splash-screen';
 import Autolink from 'react-native-autolink';
@@ -70,18 +70,29 @@ const ChatRandom = props => {
   const textWithPhoneAndLink =
     'Liên hệ qua số đt 1234567890 hoặc vào https://www.kai.com';
 
+  const textWithPhoneAndLink2 =
+    'Tôi đã gửi tin nhắn này cho bạn, mong bạn phản hồi';
+
+  let activeColor = colors['light'];
+
+  const [visibilityRP, setVisibilityRP] = useState(false);
+
+  const [visibilityNickname, setVisibilityNickname] = useState(false);
+
+  const [modalNickname, setModalNickname] = useState(false);
+
   return (
     <View
       style={{
         height: screenHeight,
         width: screenWidth,
-        backgroundColor: '#f2f2f2',
+        backgroundColor: activeColor.background,
       }}>
       <View
         style={{
-          height: screenHeight * 0.086,
-          backgroundColor: '#f2f2f2',
-          shadowColor: '#7c7c7c',
+          height: screenHeight * 0.083,
+          backgroundColor: activeColor.background,
+          shadowColor: activeColor.shadowColor,
           shadowOffset: {
             width: 0,
             height: 1,
@@ -96,9 +107,10 @@ const ChatRandom = props => {
           <Image
             source={images.talk}
             style={{
-              height: screenHeight * 0.05,
-              width: screenHeight * 0.05,
+              height: screenHeight * 0.029,
+              width: screenHeight * 0.029,
               marginHorizontal: 15,
+              marginVertical: 15,
             }}
           />
         </TouchableOpacity>
@@ -113,47 +125,69 @@ const ChatRandom = props => {
             style={{
               fontSize: 16,
               fontWeight: '500',
-              color: '#2d2d2d',
+              color: activeColor.textColorTitle,
               marginStart: 5,
             }}>
-            Chỉnh sửa biệt danh
+            Chat với người lạ
           </Text>
+        </View>
+
+        <TouchableOpacity
+          onPress={() => {
+            setChooseLeave(true);
+          }}>
           <Image
-            source={images.edit}
+            source={images.upload}
             style={{
-              height: 16,
-              width: 16,
-              marginHorizontal: 10,
+              height: screenHeight * 0.036,
+              width: screenHeight * 0.036,
+              marginVertical: 5,
+              marginEnd: 5,
+              tintColor: activeColor.infoColor,
             }}
           />
-        </View>
+        </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigate('Information')}>
           <Image
             source={images.information}
             style={{
+              height: screenHeight * 0.036,
+              width: screenHeight * 0.036,
+              marginHorizontal: 8,
+              marginVertical: 5,
+              tintColor: activeColor.infoColor,
+            }}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setVisibilityRP(!visibilityRP)}>
+          <Image
+            source={images.dots}
+            style={{
               height: screenHeight * 0.04,
               width: screenHeight * 0.04,
-              marginHorizontal: 15,
+              marginEnd: 8,
               marginVertical: 5,
-              tintColor: '#a00070',
+              tintColor: activeColor.infoColor,
             }}
           />
         </TouchableOpacity>
       </View>
+
       <View
         style={{
           height:
             showKeyboard == true
-              ? screenHeight * 0.828 - keyboardHeight
+              ? screenHeight * 0.83 - keyboardHeight
               : chooseLeave == true
-              ? screenHeight * 0.828 - screenHeight * 0.038
-              : screenHeight * 0.828,
+              ? screenHeight * 0.83 - screenHeight * 0.038
+              : screenHeight * 0.83 - screenHeight * 0.114,
           justifyContent: 'flex-end',
+          marginBottom: screenHeight * 0.002,
         }}>
         <View
           style={{
-            backgroundColor: '#e0e0e0',
+            backgroundColor: activeColor.backgroundMessage,
             justifyContent: 'center',
             alignItems: 'center',
             paddingHorizontal: 11,
@@ -163,6 +197,7 @@ const ChatRandom = props => {
             marginStart: 10,
           }}>
           <Text
+            selectable={true}
             style={{
               fontSize: 15,
               color: '#282828',
@@ -170,35 +205,83 @@ const ChatRandom = props => {
             Hello
           </Text>
         </View>
-        <View
-          style={{
-            backgroundColor: '#e0e0e0',
-            justifyContent: 'center',
-            alignItems: 'center',
-            paddingHorizontal: 11,
-            paddingVertical: 8,
-            borderRadius: 20,
-            alignSelf: 'flex-start',
-            marginStart: 10,
-            marginTop: 5,
-          }}>
-          <Autolink
+        <View>
+          {/* <Text
             style={{
-              fontSize: 15,
-              color: '#282828',
-            }}
-            text={textWithPhoneAndLink}
-          />
+              alignSelf: 'center',
+              fontSize: 14,
+            }}>
+            14:25
+          </Text> */}
+          <View
+            style={{
+              backgroundColor: activeColor.backgroundMessage,
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingHorizontal: 11,
+              paddingVertical: 8,
+              borderRadius: 20,
+              alignSelf: 'flex-start',
+              marginStart: 10,
+              marginTop: 5,
+              maxWidth: screenWidth * 0.7,
+            }}>
+            <Autolink
+              selectable={true}
+              style={{
+                fontSize: 15,
+                color: activeColor.textMessage,
+              }}
+              text={textWithPhoneAndLink}
+            />
+          </View>
+          {/* <Text
+            style={{
+              fontSize: 14,
+              marginHorizontal: 11,
+            }}>
+            <Text style={{fontWeight: '500'}}>Đã xem</Text> 14:55
+          </Text> */}
         </View>
-        <Text
-          style={{
-            marginVertical: 5,
-            marginStart: 10,
-            fontSize: 13,
-            color: '#727272',
-          }}>
-          Tap 2 lần để {'<3'}
-        </Text>
+        <View>
+          <Text
+            style={{
+              alignSelf: 'center',
+              fontSize: 14,
+            }}>
+            14:25
+          </Text>
+          <View
+            style={{
+              backgroundColor: activeColor.backgroundMessage,
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingHorizontal: 11,
+              paddingVertical: 8,
+              borderRadius: 20,
+              alignSelf: 'flex-end',
+              marginEnd: 10,
+              marginTop: 5,
+              maxWidth: screenWidth * 0.7,
+            }}>
+            <Autolink
+              selectable={true}
+              style={{
+                fontSize: 15,
+                color: activeColor.textMessage,
+              }}
+              text={textWithPhoneAndLink2}
+            />
+          </View>
+          <Text
+            style={{
+              fontSize: 14,
+              marginHorizontal: 11,
+              alignSelf: 'flex-end',
+            }}>
+            <Text style={{fontWeight: '500'}}>Đã xem</Text> 14:55
+          </Text>
+        </View>
       </View>
       {hearts.map(item => (
         <AnimatedHeart
@@ -210,35 +293,20 @@ const ChatRandom = props => {
         />
       ))}
 
-      <View
+      {/* <View
         style={{
           height: screenHeight * 0.086,
           flexDirection: 'row',
           alignItems: 'center',
           marginBottom: showKeyboard == true ? keyboardHeight : 0,
         }}>
-        <TouchableOpacity
-          onPress={() => {
-            setChooseLeave(true);
-          }}>
-          <Image
-            source={images.upload}
-            style={{
-              height: screenHeight * 0.033,
-              width: screenHeight * 0.033,
-              marginHorizontal: 15,
-              tintColor: '#600545',
-            }}
-          />
-        </TouchableOpacity>
-
         <Image
           source={images.add_image}
           style={{
             height: screenHeight * 0.034,
             width: screenHeight * 0.034,
-            marginEnd: 15,
-            tintColor: '#600545',
+            marginHorizontal: 15,
+            tintColor: activeColor.infoColor,
           }}
         />
         <TextInput
@@ -246,16 +314,16 @@ const ChatRandom = props => {
             flex: 1,
             borderRadius: 25,
             borderWidth: 1,
-            borderColor: '#ccc',
+            borderColor: activeColor.borderTextInput,
             paddingHorizontal: 20,
-            backgroundColor: '#f2f2f2',
+            backgroundColor: activeColor.backgroundInput,
             fontSize: 16,
             fontWeight: '400',
-            marginBottom: 8,
-            marginTop: 8,
+            marginBottom: 9,
+            marginTop: 9,
           }}
           placeholder="Nhập tin nhắn..."
-          placeholderTextColor="#727272"
+          placeholderTextColor={activeColor.textInput}
         />
         <TouchableOpacity
           onPress={() => {
@@ -273,7 +341,7 @@ const ChatRandom = props => {
               height: screenHeight * 0.038,
               width: screenHeight * 0.038,
               marginHorizontal: 15,
-              tintColor: '#ff00b2',
+              tintColor: activeColor.infoColor,
             }}
           />
         </TouchableOpacity>
@@ -335,7 +403,377 @@ const ChatRandom = props => {
             </View>
           </View>
         </Modal>
+      </View> */}
+      <View
+        style={{
+          height: screenHeight * 0.2,
+          width: screenWidth,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Text
+          style={{
+            marginTop: 25,
+            alignSelf: 'center',
+            fontSize: 16,
+            fontWeight: '400',
+            color: activeColor.textColorTitle,
+            marginStart: 5,
+            opacity: 0.6,
+          }}>
+          Hãy bắt đầu một cuộc trò chuyện mới
+        </Text>
+        <View
+          style={{
+            height: 80,
+            with: 100,
+            backgroundColor: 'red',
+          }}></View>
       </View>
+
+      {visibilityNickname == true ? (
+        <View
+          style={{
+            height: screenHeight,
+            width: screenWidth,
+            position: 'absolute',
+            bottom: 0,
+            top: 0,
+          }}>
+          <View
+            style={{
+              height: screenHeight * 0.083,
+              backgroundColor: activeColor.background,
+              shadowColor: activeColor.shadowColor,
+              shadowOffset: {
+                width: 0,
+                height: 1,
+              },
+              shadowOpacity: 0.5,
+              shadowRadius: 1,
+              elevation: 1,
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <TouchableOpacity
+              onPress={() => {
+                setVisibilityNickname(false);
+              }}>
+              <Image
+                source={images.back}
+                style={{
+                  height: screenHeight * 0.029,
+                  width: screenHeight * 0.029,
+                  marginHorizontal: 10,
+                  marginVertical: 15,
+                }}
+              />
+            </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: 16,
+                fontWeight: '500',
+                color: activeColor.textColorTitle,
+                marginStart: 5,
+              }}>
+              Chỉnh sửa biệt danh
+            </Text>
+          </View>
+          <View
+            style={{
+              paddingTop: 10,
+              height: screenHeight * 0.129,
+              width: screenWidth,
+              backgroundColor: activeColor.background,
+            }}>
+            <TouchableOpacity
+              onPress={() => {
+                setModalNickname(true);
+              }}
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                marginVertical: 10,
+                marginHorizontal: 25,
+              }}>
+              <View style={{}}>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    fontWeight: '500',
+                    color: activeColor.textColorTitle,
+                  }}>
+                  Đặt biệt danh
+                </Text>
+
+                <Text
+                  style={{
+                    fontSize: 13,
+                  }}>
+                  Người lạ
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                marginVertical: 10,
+                marginHorizontal: 25,
+              }}>
+              <View>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    fontWeight: '500',
+                    color: activeColor.textColorTitle,
+                  }}>
+                  Đặt biệt danh
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 13,
+                  }}>
+                  Bạn
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : (
+        <View></View>
+      )}
+
+      <Modal transparent visible={modalNickname}>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(1, 1, 1,0.5)',
+          }}>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setModalNickname(false);
+            }}>
+            <View
+              style={{
+                flex: 1,
+                width: screenWidth,
+              }}></View>
+          </TouchableWithoutFeedback>
+
+          <View
+            style={{
+              flexDirection: 'row',
+            }}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setModalNickname(false);
+              }}>
+              <View
+                style={{
+                  height: screenHeight * 0.28,
+                  width: screenWidth * 0.05,
+                }}></View>
+            </TouchableWithoutFeedback>
+            <View
+              style={{
+                height: screenHeight * 0.28,
+                width: screenWidth * 0.9,
+                borderRadius: 10,
+                backgroundColor: '#efefef',
+              }}>
+              <Text
+                style={{
+                  fontSize: 17,
+                  color: '#111',
+                  fontWeight: 'bold',
+                  marginVertical: 15,
+                  marginHorizontal: 20,
+                }}>
+                Chỉnh sửa biệt danh
+              </Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: '#565656',
+                  fontWeight: '400',
+                  marginBottom: 5,
+                  marginHorizontal: 20,
+                }}>
+                Người lạ sẽ chỉ thấy biệt dạnh này trong đoạn chat
+              </Text>
+
+              <TextInput
+                style={{
+                  fontSize: 16,
+                  fontWeight: '400',
+                  marginHorizontal: 20,
+                }}
+                placeholder="Người lạ"
+                placeholderTextColor={activeColor.textInput}
+              />
+              <View
+                style={{
+                  marginHorizontal: 20,
+                  height: 2,
+                  width: screenWidth * 0.9 - 40,
+                  backgroundColor: activeColor.textInput,
+                  opacity: 0.5,
+                }}></View>
+              <View
+                style={{
+                  flex: 1,
+                  marginBottom: 10,
+                  marginHorizontal: 16,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <TouchableOpacity
+                  onPress={() => {
+                    setModalNickname(false);
+                  }}>
+                  <Text
+                    style={{
+                      marginHorizontal: 5,
+                      fontWeight: '700',
+                      fontSize: 15,
+                    }}>
+                    Hủy
+                  </Text>
+                </TouchableOpacity>
+
+                <View
+                  style={{
+                    flex: 1,
+                  }}></View>
+                <Text
+                  style={{
+                    marginHorizontal: 5,
+                    fontWeight: '700',
+                    fontSize: 15,
+                  }}>
+                  Đặt
+                </Text>
+              </View>
+            </View>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setModalNickname(false);
+              }}>
+              <View
+                style={{
+                  height: screenHeight * 0.28,
+                  width: screenWidth * 0.05,
+                }}></View>
+            </TouchableWithoutFeedback>
+          </View>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setModalNickname(false);
+            }}>
+            <View
+              style={{
+                flex: 1,
+                width: screenWidth,
+              }}></View>
+          </TouchableWithoutFeedback>
+        </View>
+      </Modal>
+
+      {visibilityRP == true ? (
+        <View
+          style={{
+            height: screenHeight,
+            width: screenWidth,
+            position: 'absolute',
+            bottom: 0,
+            top: 0,
+            flexDirection: 'row',
+          }}>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setVisibilityRP(false);
+            }}>
+            <View
+              style={{
+                flex: 1,
+              }}></View>
+          </TouchableWithoutFeedback>
+
+          <View
+            style={{
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              marginTop: screenHeight * 0.086,
+              width: screenWidth * 0.46,
+              backgroundColor: '#fffcfe',
+              alignSelf: 'flex-end',
+              marginEnd: 15,
+            }}>
+            <Text
+              style={{
+                height: screenHeight * 0.049,
+                textAlignVertical: 'center',
+                fontSize: 16,
+                fontWeight: '400',
+                paddingHorizontal: 10,
+                color: '#282828',
+                marginVertical: 3,
+              }}>
+              Hình nền
+            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                setVisibilityRP(false);
+                setVisibilityNickname(true);
+              }}>
+              <Text
+                style={{
+                  height: screenHeight * 0.049,
+                  textAlignVertical: 'center',
+                  fontSize: 16,
+                  fontWeight: '400',
+                  paddingHorizontal: 10,
+                  color: '#282828',
+                  marginVertical: 3,
+                }}>
+                Biệt danh
+              </Text>
+            </TouchableOpacity>
+
+            <Text
+              style={{
+                height: screenHeight * 0.049,
+                textAlignVertical: 'center',
+                fontSize: 16,
+                fontWeight: '400',
+                paddingHorizontal: 10,
+                color: '#282828',
+                marginVertical: 3,
+              }}>
+              Xóa cuộc trò chuyện
+            </Text>
+            <Text
+              style={{
+                height: screenHeight * 0.049,
+                textAlignVertical: 'center',
+                paddingHorizontal: 10,
+                fontSize: 16,
+                fontWeight: '400',
+                color: '#282828',
+                marginVertical: 3,
+              }}>
+              Báo cáo vi phạm
+            </Text>
+          </View>
+        </View>
+      ) : (
+        <View></View>
+      )}
     </View>
   );
 };

@@ -19,4 +19,10 @@ export default {
   add_image: require('../assets/add-image.png'),
   bookmark: require('../assets/bookmark.png'),
   exit: require('../assets/exit.png'),
+  check: require('../assets/check.png'),
+  verify: require('../assets/verify.png'),
+  dots: require('../assets/dots.png'),
+  user: require('../assets/user.png'),
+  translate: require('../assets/translate.png'),
+  dollar: require('../assets/dollar.png'),
 };
