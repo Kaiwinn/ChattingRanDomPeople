@@ -7,8 +7,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {images} from '../constants';
+
+import axios from 'axios';
 
 const OTPLoginWithEmail = props => {
   const {email} = props.route.params;
@@ -17,6 +19,70 @@ const OTPLoginWithEmail = props => {
 
   const screenWidth = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
+
+  const [otp, setOtp] = useState(['', '', '', '', '', '']);
+  const inputRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
+
+  const sendOTP = async (otp, email) => {
+    console.log('Hàm senOTP');
+    try {
+      console.log('OTP:', otp);
+      console.log('Email:', email);
+      const response = await axios.post(
+        'https://test.vnchat.me/v2/auth/check-otp',
+        {
+          otp: otp,
+          email: email,
+        },
+      );
+      return response.data;
+    } catch (error) {
+      console.error('Error sending OTP:', error);
+      throw error;
+    }
+  };
+
+  const handleOTPChange = async (index, text) => {
+    if (/^\d+$/.test(text) && text.length <= 1) {
+      const newOtp = [...otp];
+      newOtp[index] = text;
+
+      if (text.length === 0) {
+        // Nếu ô hiện tại rỗng
+        if (index > 0) {
+          inputRefs[index - 1].current.clear(); // Xóa giá trị ô trước đó
+          inputRefs[index - 1].current.focus(); // Chuyển đến ô trước đó
+        }
+      } else if (index < inputRefs.length - 1) {
+        // Di chuyển tới ô kế tiếp khi người dùng nhập một số
+        inputRefs[index + 1].current.focus();
+      }
+
+      setOtp(newOtp);
+
+      const isAllFilled = newOtp.every(code => code.length === 1);
+
+      if (isAllFilled) {
+        try {
+          const response = await sendOTP(newOtp.join(''), email);
+          console.log('OTP sent successfully:', response);
+
+          // Xử lý kết quả từ API ở đây, ví dụ chuyển đến màn hình tiếp theo
+        } catch (error) {
+          // Xử lý lỗi nếu gửi OTP không thành công
+          console.error('Error sending OTP:', error);
+        }
+      }
+    }
+  };
+
   return (
     <View
       style={{
@@ -92,96 +158,44 @@ const OTPLoginWithEmail = props => {
           alignItems: 'center',
           marginHorizontal: 5,
         }}>
-        <TextInput
-          style={{
-            borderRadius: 15,
-            borderWidth: 1,
-            borderColor: '#ffc4cd',
-            backgroundColor: '#fff',
-            fontSize: 16,
-            fontWeight: '400',
-            height: screenHeight * 0.07,
-            width: screenHeight * 0.07,
-            textAlign: 'center',
-          }}
-          placeholderTextColor={'#111'}
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={{
-            borderRadius: 15,
-            borderWidth: 1,
-            borderColor: '#ffc4cd',
-            backgroundColor: '#fff',
-            fontSize: 16,
-            fontWeight: '400',
-            height: screenHeight * 0.07,
-            width: screenHeight * 0.07,
-            textAlign: 'center',
-          }}
-          placeholderTextColor={'#111'}
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={{
-            borderRadius: 15,
-            borderWidth: 1,
-            borderColor: '#ffc4cd',
-            backgroundColor: '#fff',
-            fontSize: 16,
-            fontWeight: '400',
-            height: screenHeight * 0.07,
-            width: screenHeight * 0.07,
-            textAlign: 'center',
-          }}
-          placeholderTextColor={'#111'}
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={{
-            borderRadius: 15,
-            borderWidth: 1,
-            borderColor: '#ffc4cd',
-            backgroundColor: '#fff',
-            fontSize: 16,
-            fontWeight: '400',
-            height: screenHeight * 0.07,
-            width: screenHeight * 0.07,
-            textAlign: 'center',
-          }}
-          placeholderTextColor={'#111'}
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={{
-            borderRadius: 15,
-            borderWidth: 1,
-            borderColor: '#ffc4cd',
-            backgroundColor: '#fff',
-            fontSize: 16,
-            fontWeight: '400',
-            height: screenHeight * 0.07,
-            width: screenHeight * 0.07,
-            textAlign: 'center',
-          }}
-          placeholderTextColor={'#111'}
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={{
-            borderRadius: 15,
-            borderWidth: 1,
-            borderColor: '#ffc4cd',
-            backgroundColor: '#fff',
-            fontSize: 16,
-            fontWeight: '400',
-            height: screenHeight * 0.07,
-            width: screenHeight * 0.07,
-            textAlign: 'center',
-          }}
-          placeholderTextColor={'#111'}
-          keyboardType="numeric"
-        />
+        {otp.map((code, index) => (
+          <TextInput
+            key={index}
+            ref={inputRefs[index]}
+            style={{
+              borderRadius: 15,
+              borderWidth: 1,
+              borderColor: '#ffc4cd',
+              backgroundColor: '#fff',
+              fontSize: 16,
+              fontWeight: '400',
+              height: screenHeight * 0.07,
+              width: screenHeight * 0.07,
+              textAlign: 'center',
+            }}
+            keyboardType="numeric"
+            maxLength={1}
+            defaultValue={code}
+            onChangeText={text => handleOTPChange(index, text)}
+            onFocus={() => {
+              if (index === 0 && code.length === 0) {
+                inputRefs[index].current.clear();
+              }
+            }}
+            onBlur={() => {
+              if (code.length === 0) {
+                inputRefs[index].current.clear();
+              }
+            }}
+            onKeyPress={({nativeEvent}) => {
+              if (nativeEvent.key === 'Backspace' && index > 0) {
+                console.log('Backspace pressed');
+                // Nếu người dùng bấm nút xóa (backspace) khi ô rỗng và không phải là ô đầu tiên
+                inputRefs[index - 1].current.focus(); // Di chuyển đến ô trước đó
+              }
+            }}
+          />
+        ))}
       </View>
       <Text
         style={{

@@ -16,6 +16,7 @@ import React, {useEffect, useState} from 'react';
 import {images} from '../constants';
 import {LoginManager, AccessToken, Profile} from 'react-native-fbsdk-next';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import axios from 'axios';
 
 export const CLI_ID_GOOGLE =
   Platform.OS == 'ios'
@@ -32,28 +33,54 @@ const Login = props => {
   const [email, setEmail] = useState('');
 
   const handleLoginFacebook = async () => {
-    LoginManager.logInWithPermissions(['public_profile']).then(require => {
-      if (require.isCancelled) {
-        console.log('Login cancelled');
-      } else {
-        Profile.getCurrentProfile().then(currentProfile => {
-          if (currentProfile) {
-            console.log('Login success with name: ' + currentProfile.name);
-            navigate('ChatRandom');
-          } else {
-            console.log('Login success with no profile');
-          }
-        });
+    try {
+      const result = await LoginManager.logInWithPermissions([
+        'public_profile',
+      ]);
 
-        AccessToken.getCurrentAccessToken().then(data => {
-          console.log(data.accessToken.toString());
-        });
+      if (result.isCancelled) {
+        console.log('Đăng nhập Facebook bị huỷ');
+      } else {
+        const data = await AccessToken.getCurrentAccessToken();
+
+        if (data) {
+          const {accessToken} = data;
+          console.log('Access Token:', accessToken);
+
+          // Sau khi có Access Token, bạn có thể gửi nó đến máy chủ của bạn để xác thực đăng nhập.
+
+          // Sau khi xác thực thành công, bạn có thể chuyển hướng người dùng đến màn hình ChatRandom bằng hàm navigate.
+          navigate('ChatRandom');
+        }
       }
-    });
+    } catch (error) {
+      console.error('Lỗi khi đăng nhập Facebook:', error);
+    }
+  };
+  const handleLoginEmail = async email => {
+    try {
+      const response = await fetch('https://test.vnchat.me/v2/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({email: email}), // Thay email_cua_ban@gmail.com bằng email thực sự
+      });
+
+      if (response.status === 200) {
+        const data = await response.json();
+        console.log('Kết quả đăng nhập:', data);
+      } else {
+        console.log('Đăng nhập không thành công. Mã lỗi:', response.status);
+      }
+    } catch (error) {
+      console.error('Lỗi:', error);
+    }
   };
 
   useEffect(() => {
     SplashScreen.hide();
+
     GoogleSignin.configure({
       webClientId: CLI_ID_GOOGLE,
     });
@@ -167,7 +194,7 @@ const Login = props => {
                 />
                 <Text
                   style={{
-                    marginStart: 16,
+                    marginStart: 14,
                     color: '#ffffff',
                     fontSize: 15,
                     fontWeight: 'bold',
@@ -210,7 +237,7 @@ const Login = props => {
                 />
                 <Text
                   style={{
-                    marginStart: 16,
+                    marginStart: 14,
                     color: '#1e1e1e',
                     fontSize: 15,
                     fontWeight: 'bold',
@@ -280,7 +307,10 @@ const Login = props => {
                 Quay Lại
               </Text>
               <TouchableWithoutFeedback
-                onPress={() => navigate('OTPLoginWithEmail', {email: email})}>
+                onPress={() => {
+                  handleLoginEmail(email);
+                  navigate('OTPLoginWithEmail', {email: email});
+                }}>
                 <Text
                   style={{
                     fontSize: 15,

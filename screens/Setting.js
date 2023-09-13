@@ -8,8 +8,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {colors, images} from '../constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {changeColor} from '../redux/Reducer';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Setting = props => {
   const {navigation, route} = props;
@@ -42,18 +45,37 @@ const Setting = props => {
       name: 'Thông tin',
     },
   ]);
+
+  const [visibleInterface, setVisibleInterface] = useState(false);
+
+  const THEME = useSelector(state => state.theme.color);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    AsyncStorage.getItem('selectedColor')
+      .then(color => {
+        if (color) {
+          dispatch(changeColor(color));
+        }
+      })
+      .catch(error =>
+        console.error('Error loading color from AsyncStorage:', error),
+      );
+  }, [dispatch]);
+
   return (
     <View
       style={{
         height: screenHeight,
         width: screenWidth,
-        backgroundColor: colors.light.background,
+        backgroundColor: colors[THEME].background,
       }}>
       <View
         style={{
           height: screenHeight * 0.086,
-          backgroundColor: colors.light.background,
-          shadowColor: colors.light.shadowColor,
+          backgroundColor: colors[THEME].background,
+          shadowColor: colors[THEME].shadowColor,
           shadowOffset: {
             width: 0,
             height: 1,
@@ -74,7 +96,7 @@ const Setting = props => {
               height: screenHeight * 0.032,
               width: screenHeight * 0.032,
               marginHorizontal: 15,
-              tintColor: colors.light.infoColor,
+              tintColor: colors[THEME].infoColor,
             }}
           />
         </TouchableOpacity>
@@ -83,7 +105,7 @@ const Setting = props => {
           style={{
             fontSize: 18,
             fontWeight: 'bold',
-            color: colors.light.textColorTitle,
+            color: colors[THEME].textColorTitle,
             marginStart: 5,
             flex: 1,
           }}>
@@ -124,7 +146,7 @@ const Setting = props => {
             style={{
               fontSize: 19,
               fontWeight: 'bold',
-              color: colors.light.name,
+              color: colors[THEME].name,
             }}>
             Nguyễn Đức Chiến
           </Text>
@@ -148,7 +170,7 @@ const Setting = props => {
                 fontSize: 15,
                 fontWeight: 'bold',
                 marginHorizontal: 5,
-                color: colors.light.name,
+                color: colors[THEME].name,
                 fontStyle: 'italic',
                 opacity: 0.7,
               }}>
@@ -164,7 +186,7 @@ const Setting = props => {
             <View key={index}>
               <TouchableOpacity
                 onPress={() => {
-                  item.id == 2 ? navigate('Interface') : '';
+                  item.id == 2 ? setVisibleInterface(true) : '';
                 }}>
                 <View
                   style={{
@@ -192,13 +214,13 @@ const Setting = props => {
                       height: screenHeight * 0.038,
                       width: screenHeight * 0.038,
                       marginHorizontal: 15,
-                      tintColor: colors.light.iconSettings,
+                      tintColor: colors[THEME].iconSettings,
                     }}
                   />
                   <Text
                     style={{
                       flex: 1,
-                      color: colors.light.iconSettings,
+                      color: colors[THEME].iconSettings,
                       fontSize: 16,
                       fontWeight: '400',
                     }}>
@@ -210,7 +232,7 @@ const Setting = props => {
                       height: screenHeight * 0.03,
                       width: screenHeight * 0.03,
                       marginHorizontal: 10,
-                      tintColor: colors.light.textMessage,
+                      tintColor: colors[THEME].textMessage,
                     }}
                   />
                 </View>
@@ -248,7 +270,7 @@ const Setting = props => {
         </View>
       </View>
 
-      <Modal transparent visible={false}>
+      <Modal transparent visible={visibleInterface}>
         <View
           style={{
             flex: 1,
@@ -297,28 +319,64 @@ const Setting = props => {
                 justifyContent: 'space-around',
                 alignItems: 'center',
               }}>
-              <View
-                style={{
-                  height: screenHeight * 0.08,
-                  width: screenHeight * 0.08,
-                  backgroundColor: '#ffffff',
-                  borderRadius: screenHeight * 0.04,
-                }}></View>
-              <View
-                style={{
-                  height: screenHeight * 0.08,
-                  width: screenHeight * 0.08,
-                  backgroundColor: '#212121',
-                  borderRadius: screenHeight * 0.04,
-                }}></View>
-              <View
-                style={{
-                  height: screenHeight * 0.08,
-                  width: screenHeight * 0.08,
-                  backgroundColor: '#f7a5f1',
-                  borderRadius: screenHeight * 0.04,
-                }}></View>
+              <TouchableOpacity
+                onPress={() => {
+                  dispatch(changeColor('light'));
+                  setVisibleInterface(false);
+                }}>
+                <View
+                  style={{
+                    height: screenHeight * 0.08,
+                    width: screenHeight * 0.08,
+                    backgroundColor: '#ffffff',
+                    borderRadius: screenHeight * 0.04,
+                  }}></View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  dispatch(changeColor('dark'));
+                  setVisibleInterface(false);
+                }}>
+                <View
+                  style={{
+                    height: screenHeight * 0.08,
+                    width: screenHeight * 0.08,
+                    backgroundColor: '#212121',
+                    borderRadius: screenHeight * 0.04,
+                  }}></View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  dispatch(changeColor('pink'));
+                  setVisibleInterface(false);
+                }}>
+                <View
+                  style={{
+                    height: screenHeight * 0.08,
+                    width: screenHeight * 0.08,
+                    backgroundColor: '#f7a5f1',
+                    borderRadius: screenHeight * 0.04,
+                  }}></View>
+              </TouchableOpacity>
             </View>
+
+            <TouchableOpacity
+              onPress={() => {
+                setVisibleInterface(false);
+              }}
+              style={{
+                position: 'absolute',
+                bottom: 6,
+                right: 6,
+              }}>
+              <Text
+                style={{
+                  margin: 10,
+                  color: '#1885bc',
+                }}>
+                Cancel
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>

@@ -1,21 +1,5 @@
 export default colors = {
   light: {
-    // Pink
-    background: '#fcd6fa',
-    shadowColor: '#d3d3d3',
-    textColorTitle: '#111',
-    infoColor: '#353135',
-    backgroundMessage: '#fff',
-    textMessage: '#282828',
-    extraText: '#5e5e5e',
-    backgroundInput: '#ffeafd',
-    borderTextInput: '#353135',
-    textInput: '#353135',
-    iconSettings: '#111',
-    report: '#111',
-    name: '#232323',
-  },
-  dark: {
     // White
     background: '#f2f2f2',
     shadowColor: '#7c7c7c',
@@ -31,7 +15,7 @@ export default colors = {
     report: '#961696',
     name: '#727272',
   },
-  pink: {
+  dark: {
     // Dark
     background: '#1c1c1c',
     shadowColor: '#d3d3d3',
@@ -46,5 +30,21 @@ export default colors = {
     iconSettings: '#b2b2b2',
     report: '#e8e8e8',
     name: '#c6c6c6',
+  },
+  pink: {
+    // Pink
+    background: '#fcd6fa',
+    shadowColor: '#d3d3d3',
+    textColorTitle: '#111',
+    infoColor: '#353135',
+    backgroundMessage: '#fff',
+    textMessage: '#282828',
+    extraText: '#5e5e5e',
+    backgroundInput: '#ffeafd',
+    borderTextInput: '#353135',
+    textInput: '#353135',
+    iconSettings: '#111',
+    report: '#111',
+    name: '#232323',
   },
 };
