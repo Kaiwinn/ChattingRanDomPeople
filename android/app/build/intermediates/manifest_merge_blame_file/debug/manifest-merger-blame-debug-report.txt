@@ -14,260 +14,274 @@
 12    <uses-permission android:name="android.permission.INTERNET" />
 12-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:3:5-67
 12-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:3:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
-14
-15    <queries>
-15-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:17:5-19:15
-16        <package android:name="com.facebook.katana" />
-16-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:18:9-55
-16-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:18:18-52
-17    </queries>
+13    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+13-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:4:5-76
+13-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:4:22-73
+14    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+14-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:5-75
+14-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:22-72
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:5-80
+15-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:5-81
+16-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:22-78
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->[com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
+17-->[com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
 18
-19    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-19-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:16:5-79
-19-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:16:22-76
-20    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-20-->[com.android.installreferrer:installreferrer:1.0] C:\Users\TTC\.gradle\caches\transforms-3\dbc6fafbe893e35d481ea50a8e3fdd15\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
-20-->[com.android.installreferrer:installreferrer:1.0] C:\Users\TTC\.gradle\caches\transforms-3\dbc6fafbe893e35d481ea50a8e3fdd15\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
-21
-22    <application
-22-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:5-42:19
-23        android:name="com.chattingrandompeople.MainApplication"
-23-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:7-38
-24        android:allowBackup="false"
-24-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:10:7-34
-25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.7.0] C:\Users\TTC\.gradle\caches\transforms-3\d949d9c7f1fdb91a6021a71803319832\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-26        android:debuggable="true"
-27        android:icon="@mipmap/ic_launcher"
-27-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:8:7-41
-28        android:label="@string/app_name"
-28-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:7-39
-29        android:roundIcon="@mipmap/ic_launcher_round"
-29-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:9:7-52
-30        android:supportsRtl="true"
-30-->[com.facebook.android:facebook-android-sdk:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\8209f98567b429800ddeb2971946d787\transformed\jetified-facebook-android-sdk-15.2.0\AndroidManifest.xml:16:18-44
-31        android:theme="@style/AppTheme"
-31-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:11:7-38
-32        android:usesCleartextTraffic="true" >
-32-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:8:9-44
-33        <activity
-33-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:9-111
-34            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-34-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:19-83
-35            android:exported="false" />
-35-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:84-108
-36
-37        <meta-data
-37-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:12:7-105
-38            android:name="com.facebook.sdk.ApplicationId"
-38-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:12:18-63
-39            android:value="@string/facebook_app_id" />
-39-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:12:64-103
-40        <meta-data
-40-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:13:7-109
-41            android:name="com.facebook.sdk.ClientToken"
-41-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:13:18-61
-42            android:value="@string/facebook_client_token" />
-42-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:13:62-107
-43
-44        <activity
-44-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:15:7-18:44
-45            android:name="com.facebook.FacebookActivity"
-45-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:15:17-61
-46            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-46-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:16:9-109
-47            android:label="@string/app_name"
-47-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:9-41
-48            android:theme="@style/com_facebook_activity_theme" />
-48-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:25:13-63
+19    <queries>
+19-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:17:5-19:15
+20        <package android:name="com.facebook.katana" />
+20-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:18:9-55
+20-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:18:18-52
+21    </queries>
+22
+23    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+23-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:16:5-79
+23-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:16:22-76
+24    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+24-->[com.android.installreferrer:installreferrer:1.0] C:\Users\TTC\.gradle\caches\transforms-3\dbc6fafbe893e35d481ea50a8e3fdd15\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+24-->[com.android.installreferrer:installreferrer:1.0] C:\Users\TTC\.gradle\caches\transforms-3\dbc6fafbe893e35d481ea50a8e3fdd15\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+25
+26    <application
+26-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:9:5-47:19
+27        android:name="com.chattingrandompeople.MainApplication"
+27-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:11:7-38
+28        android:allowBackup="false"
+28-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:15:7-34
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.7.0] C:\Users\TTC\.gradle\caches\transforms-3\d949d9c7f1fdb91a6021a71803319832\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+31-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:13:7-41
+32        android:label="@string/app_name"
+32-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:12:7-39
+33        android:requestLegacyExternalStorage="true"
+33-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:10:7-50
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:14:7-52
+35        android:supportsRtl="true"
+35-->[com.facebook.android:facebook-android-sdk:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\8209f98567b429800ddeb2971946d787\transformed\jetified-facebook-android-sdk-15.2.0\AndroidManifest.xml:16:18-44
+36        android:theme="@style/AppTheme"
+36-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:16:7-38
+37        android:usesCleartextTraffic="true" >
+37-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:8:9-44
+38        <activity
+38-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:9-111
+39            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+39-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:19-83
+40            android:exported="false" />
+40-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:84-108
+41
+42        <meta-data
+42-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:7-105
+43            android:name="com.facebook.sdk.ApplicationId"
+43-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:18-63
+44            android:value="@string/facebook_app_id" />
+44-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:64-103
+45        <meta-data
+45-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:7-109
+46            android:name="com.facebook.sdk.ClientToken"
+46-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:18-61
+47            android:value="@string/facebook_client_token" />
+47-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:62-107
+48
 49        <activity
-49-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:19:7-28:18
-50            android:name="com.facebook.CustomTabActivity"
-50-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:9-54
-51            android:exported="true" >
-51-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:21:9-32
-52            <intent-filter>
-52-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:22:9-27:25
-53                <action android:name="android.intent.action.VIEW" />
-53-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:13-65
-53-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:21-62
-54
-55                <category android:name="android.intent.category.DEFAULT" />
-55-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:13-72
-55-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:23-69
-56                <category android:name="android.intent.category.BROWSABLE" />
-56-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:13-74
-56-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:23-71
-57
-58                <data android:scheme="@string/fb_login_protocol_scheme" />
-58-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:13-71
-58-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:19-68
-59            </intent-filter>
-60            <intent-filter>
-60-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:31:13-40:29
-61                <action android:name="android.intent.action.VIEW" />
-61-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:13-65
-61-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:21-62
+49-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:7-23:44
+50            android:name="com.facebook.FacebookActivity"
+50-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:17-61
+51            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+51-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:21:9-109
+52            android:label="@string/app_name"
+52-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:9-41
+53            android:theme="@style/com_facebook_activity_theme" />
+53-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:25:13-63
+54        <activity
+54-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:7-33:18
+55            android:name="com.facebook.CustomTabActivity"
+55-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:9-54
+56            android:exported="true" >
+56-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:9-32
+57            <intent-filter>
+57-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:27:9-32:25
+58                <action android:name="android.intent.action.VIEW" />
+58-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:13-65
+58-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:21-62
+59
+60                <category android:name="android.intent.category.DEFAULT" />
+60-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:13-72
+60-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:23-69
+61                <category android:name="android.intent.category.BROWSABLE" />
+61-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:13-74
+61-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:23-71
 62
-63                <category android:name="android.intent.category.DEFAULT" />
-63-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:13-72
-63-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:23-69
-64                <category android:name="android.intent.category.BROWSABLE" />
-64-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:13-74
-64-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:23-71
-65
-66                <data
-66-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:13-71
-67                    android:host="cct.com.chattingrandompeople"
-68                    android:scheme="fbconnect" />
-68-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:19-68
-69            </intent-filter>
-70        </activity>
-71        <activity
-71-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:7-41:18
-72            android:name="com.chattingrandompeople.MainActivity"
-72-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:9-37
-73            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-73-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:33:9-118
-74            android:exported="true"
-74-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:36:9-32
-75            android:label="@string/app_name"
-75-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:32:9-41
-76            android:launchMode="singleTask"
-76-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:34:9-40
-77            android:windowSoftInputMode="adjustResize" >
-77-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:35:9-51
-78            <intent-filter>
-78-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:37:9-40:25
-79                <action android:name="android.intent.action.MAIN" />
-79-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:38:13-65
-79-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:38:21-62
-80
-81                <category android:name="android.intent.category.LAUNCHER" />
-81-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:39:13-73
-81-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:39:23-70
-82            </intent-filter>
-83        </activity>
-84        <activity android:name="com.facebook.CustomTabMainActivity" />
-84-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:26:9-71
-84-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:26:19-68
-85        <!--
-86         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
-87         with the application context. This config is merged in with the host app's manifest,
-88         but there can only be one provider with the same authority activated at any given
-89         point; so if the end user has two or more different apps that use Facebook SDK, only the
-90         first one will be able to use the provider. To work around this problem, we use the
-91         following placeholder in the authority to identify each host application as if it was
-92         a completely different provider.
-93        -->
-94        <provider
-94-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:29:9-32:40
-95            android:name="com.facebook.internal.FacebookInitProvider"
-95-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:30:13-70
-96            android:authorities="com.chattingrandompeople.FacebookInitProvider"
-96-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:31:13-72
-97            android:exported="false" />
-97-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:32:13-37
-98
-99        <receiver
-99-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:34:9-40:20
-100            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
-100-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:35:13-86
-101            android:exported="false" >
-101-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:36:13-37
-102            <intent-filter>
-102-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:37:13-39:29
-103                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
-103-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:38:17-95
-103-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:38:25-92
-104            </intent-filter>
-105        </receiver>
-106        <receiver
-106-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:41:9-47:20
-107            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
-107-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:42:13-118
-108            android:exported="false" >
-108-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:43:13-37
-109            <intent-filter>
-109-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:44:13-46:29
-110                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
-110-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:45:17-103
-110-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:45:25-100
-111            </intent-filter>
-112        </receiver>
-113
-114        <meta-data
-114-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
-115            android:name="com.facebook.soloader.enabled"
-115-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
-116            android:value="false" />
-116-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
-117
-118        <activity
-118-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
-119            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-119-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
-120            android:excludeFromRecents="true"
-120-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
-121            android:exported="false"
-121-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
-122            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-122-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
-123        <!--
-124            Service handling Google Sign-In user revocation. For apps that do not integrate with
-125            Google Sign-In, this service will never be started.
-126        -->
-127        <service
-127-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
-128            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-128-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
-129            android:exported="true"
-129-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
-130            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-130-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
-131            android:visibleToInstantApps="true" />
-131-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
-132
-133        <activity
-133-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-134            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-134-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-135            android:exported="false"
-135-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-136            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-136-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+63                <data android:scheme="@string/fb_login_protocol_scheme" />
+63-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:13-71
+63-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:19-68
+64            </intent-filter>
+65            <intent-filter>
+65-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:31:13-40:29
+66                <action android:name="android.intent.action.VIEW" />
+66-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:13-65
+66-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:21-62
+67
+68                <category android:name="android.intent.category.DEFAULT" />
+68-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:13-72
+68-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:23-69
+69                <category android:name="android.intent.category.BROWSABLE" />
+69-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:13-74
+69-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:23-71
+70
+71                <data
+71-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:13-71
+72                    android:host="cct.com.chattingrandompeople"
+73                    android:scheme="fbconnect" />
+73-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:19-68
+74            </intent-filter>
+75        </activity>
+76        <activity
+76-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:35:7-46:18
+77            android:name="com.chattingrandompeople.MainActivity"
+77-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:36:9-37
+78            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+78-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:38:9-118
+79            android:exported="true"
+79-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:41:9-32
+80            android:label="@string/app_name"
+80-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:37:9-41
+81            android:launchMode="singleTask"
+81-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:39:9-40
+82            android:windowSoftInputMode="adjustResize" >
+82-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:40:9-51
+83            <intent-filter>
+83-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:42:9-45:25
+84                <action android:name="android.intent.action.MAIN" />
+84-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:43:13-65
+84-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:43:21-62
+85
+86                <category android:name="android.intent.category.LAUNCHER" />
+86-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:44:13-73
+86-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:44:23-70
+87            </intent-filter>
+88        </activity>
+89        <activity android:name="com.facebook.CustomTabMainActivity" />
+89-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:26:9-71
+89-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:26:19-68
+90        <!--
+91         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+92         with the application context. This config is merged in with the host app's manifest,
+93         but there can only be one provider with the same authority activated at any given
+94         point; so if the end user has two or more different apps that use Facebook SDK, only the
+95         first one will be able to use the provider. To work around this problem, we use the
+96         following placeholder in the authority to identify each host application as if it was
+97         a completely different provider.
+98        -->
+99        <provider
+99-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:29:9-32:40
+100            android:name="com.facebook.internal.FacebookInitProvider"
+100-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:30:13-70
+101            android:authorities="com.chattingrandompeople.FacebookInitProvider"
+101-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:31:13-72
+102            android:exported="false" />
+102-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:32:13-37
+103
+104        <receiver
+104-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:34:9-40:20
+105            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+105-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:35:13-86
+106            android:exported="false" >
+106-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:36:13-37
+107            <intent-filter>
+107-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:37:13-39:29
+108                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+108-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:38:17-95
+108-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:38:25-92
+109            </intent-filter>
+110        </receiver>
+111        <receiver
+111-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:41:9-47:20
+112            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+112-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:42:13-118
+113            android:exported="false" >
+113-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:43:13-37
+114            <intent-filter>
+114-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:44:13-46:29
+115                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+115-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:45:17-103
+115-->[com.facebook.android:facebook-core:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\b3b332b78a6c0038978754fee30d6d52\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:45:25-100
+116            </intent-filter>
+117        </receiver>
+118
+119        <meta-data
+119-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+120            android:name="com.facebook.soloader.enabled"
+120-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
+121            android:value="false" />
+121-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
+122
+123        <activity
+123-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
+124            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+124-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
+125            android:excludeFromRecents="true"
+125-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
+126            android:exported="false"
+126-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
+127            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+127-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
+128        <!--
+129            Service handling Google Sign-In user revocation. For apps that do not integrate with
+130            Google Sign-In, this service will never be started.
+131        -->
+132        <service
+132-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
+133            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+133-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
+134            android:exported="true"
+134-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
+135            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+135-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
+136            android:visibleToInstantApps="true" />
+136-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
 137
-138        <meta-data
-138-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-139            android:name="com.google.android.gms.version"
-139-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-140            android:value="@integer/google_play_services_version" />
-140-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-141
-142        <provider
-142-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-143            android:name="androidx.startup.InitializationProvider"
-143-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-144            android:authorities="com.chattingrandompeople.androidx-startup"
-144-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-145            android:exported="false" >
-145-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-146            <meta-data
-146-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-147                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-147-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-148                android:value="androidx.startup" />
-148-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-149            <meta-data
-149-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-150                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-150-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-151                android:value="androidx.startup" />
-151-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-152        </provider>
-153    </application>
-154
-155</manifest>
+138        <activity
+138-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+139            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+139-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+140            android:exported="false"
+140-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+141            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+141-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+142
+143        <meta-data
+143-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+144            android:name="com.google.android.gms.version"
+144-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+145            android:value="@integer/google_play_services_version" />
+145-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+146
+147        <provider
+147-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+148            android:name="androidx.startup.InitializationProvider"
+148-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+149            android:authorities="com.chattingrandompeople.androidx-startup"
+149-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+150            android:exported="false" >
+150-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+151            <meta-data
+151-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+152                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+152-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+153                android:value="androidx.startup" />
+153-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+154            <meta-data
+154-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+155                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+155-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+156                android:value="androidx.startup" />
+156-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+157        </provider>
+158    </application>
+159
+160</manifest>

@@ -9,12 +9,16 @@ import {
   View,
   Modal,
   TouchableWithoutFeedback,
+  FlatList,
+  Platform,
+  PermissionsAndroid,
 } from 'react-native';
 import React, {useCallback, useEffect, useState} from 'react';
 import {colors, images} from '../constants';
 import AnimatedHeart from '../components/animated/AnimatedHeart';
 import SplashScreen from 'react-native-splash-screen';
 import Autolink from 'react-native-autolink';
+import {CameraRoll} from '@react-native-camera-roll/camera-roll';
 
 function getUniqueID() {
   return Math.floor(Math.random() * Date.now()).toString();
@@ -44,7 +48,6 @@ const ChatRandom = props => {
       event => {
         // Chiều cao của bàn phím là event.endCoordinates.height
         const keyboardHeight = event.endCoordinates.height;
-        console.log('Keyboard is shown with height:', keyboardHeight);
 
         setKeyboardHeight(keyboardHeight);
         setShowKeyboard(true);
@@ -55,7 +58,6 @@ const ChatRandom = props => {
       'keyboardDidHide',
       () => {
         setShowKeyboard(false);
-        console.log('Keyboard is hidden');
       },
     );
 
@@ -80,6 +82,98 @@ const ChatRandom = props => {
   const [visibilityNickname, setVisibilityNickname] = useState(false);
 
   const [modalNickname, setModalNickname] = useState(false);
+
+  const [startChat, setStartChat] = useState(true);
+
+  const [showUploadImg, setShowUploadImg] = useState(false);
+
+  async function hasAndroidPermission() {
+    const getCheckPermissionPromise = () => {
+      if (Platform.Version >= 33) {
+        return Promise.all([
+          PermissionsAndroid.check(
+            PermissionsAndroid.PERMISSIONS.READ_MEDIA_IMAGES,
+          ),
+          PermissionsAndroid.check(
+            PermissionsAndroid.PERMISSIONS.READ_MEDIA_VIDEO,
+          ),
+        ]).then(
+          ([hasReadMediaImagesPermission, hasReadMediaVideoPermission]) =>
+            hasReadMediaImagesPermission && hasReadMediaVideoPermission,
+        );
+      } else {
+        return PermissionsAndroid.check(
+          PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        );
+      }
+    };
+
+    const hasPermission = await getCheckPermissionPromise();
+    if (hasPermission) {
+      return true;
+    }
+    const getRequestPermissionPromise = () => {
+      if (Platform.Version >= 33) {
+        return PermissionsAndroid.requestMultiple([
+          PermissionsAndroid.PERMISSIONS.READ_MEDIA_IMAGES,
+          PermissionsAndroid.PERMISSIONS.READ_MEDIA_VIDEO,
+        ]).then(
+          statuses =>
+            statuses[PermissionsAndroid.PERMISSIONS.READ_MEDIA_IMAGES] ===
+              PermissionsAndroid.RESULTS.GRANTED &&
+            statuses[PermissionsAndroid.PERMISSIONS.READ_MEDIA_VIDEO] ===
+              PermissionsAndroid.RESULTS.GRANTED,
+        );
+      } else {
+        return PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        ).then(status => status === PermissionsAndroid.RESULTS.GRANTED);
+      }
+    };
+
+    return await getRequestPermissionPromise();
+  }
+
+  async function getPhotos() {
+    try {
+      const result = await CameraRoll.getPhotos({
+        first: 30, // Lấy 20 ảnh đầu tiên
+        assetType: 'Photos',
+      });
+      const photosArray = result.edges || [];
+      setPhotos(photosArray);
+    } catch (error) {
+      console.error('Error loading photos:', error);
+    }
+  }
+
+  _handleButtonPress = async () => {
+    const hasPermission = await hasAndroidPermission();
+    if (hasPermission) {
+      await getPhotos();
+    }
+  };
+
+  const [photos, setPhotos] = useState([]);
+
+  const renderPhoto = ({item}) => (
+    <View
+      style={{
+        margin: 1,
+        flex: 1 / 3, // Chia mỗi phần thành 1/3 để hiển thị 3 cột
+      }}>
+      <Image
+        style={{width: '100%', aspectRatio: 1}}
+        // Thiết lập chiều rộng là 100% và tỷ lệ khung hình 1:1
+        source={{
+          uri: item.node.image.uri,
+        }}
+      />
+    </View>
+  );
+
+  const [detailSend, setDetailSend] = useState(false);
+  const [detailRecive, setDetailRecive] = useState(false);
 
   return (
     <View
@@ -181,6 +275,14 @@ const ChatRandom = props => {
               ? screenHeight * 0.83 - keyboardHeight
               : chooseLeave == true
               ? screenHeight * 0.83 - screenHeight * 0.038
+              : showUploadImg == true &&
+                startChat == false &&
+                showKeyboard == false
+              ? screenHeight * 0.83 -
+                screenHeight * 0.114 -
+                screenHeight * 0.235
+              : startChat == false
+              ? screenHeight * 0.83
               : screenHeight * 0.83 - screenHeight * 0.114,
           justifyContent: 'flex-end',
           marginBottom: screenHeight * 0.002,
@@ -206,81 +308,112 @@ const ChatRandom = props => {
           </Text>
         </View>
         <View>
-          {/* <Text
-            style={{
-              alignSelf: 'center',
-              fontSize: 14,
-            }}>
-            14:25
-          </Text> */}
-          <View
-            style={{
-              backgroundColor: activeColor.backgroundMessage,
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingHorizontal: 11,
-              paddingVertical: 8,
-              borderRadius: 20,
-              alignSelf: 'flex-start',
-              marginStart: 10,
-              marginTop: 5,
-              maxWidth: screenWidth * 0.7,
-            }}>
-            <Autolink
-              selectable={true}
+          {detailRecive && (
+            <Text
               style={{
-                fontSize: 15,
-                color: activeColor.textMessage,
-              }}
-              text={textWithPhoneAndLink}
-            />
-          </View>
-          {/* <Text
-            style={{
-              fontSize: 14,
-              marginHorizontal: 11,
+                alignSelf: 'center',
+                fontSize: 13,
+                marginVertical: 3,
+              }}>
+              14:25
+            </Text>
+          )}
+
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setDetailRecive(!detailRecive);
             }}>
-            <Text style={{fontWeight: '500'}}>Đã xem</Text> 14:55
-          </Text> */}
+            <View
+              style={{
+                backgroundColor: activeColor.backgroundMessage,
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingHorizontal: 11,
+                paddingVertical: 8,
+                borderRadius: 20,
+                alignSelf: 'flex-start',
+                marginStart: 10,
+                marginTop: 5,
+                maxWidth: screenWidth * 0.7,
+              }}>
+              <Autolink
+                selectable={true}
+                style={{
+                  fontSize: 15,
+                  color: activeColor.textMessage,
+                }}
+                text={textWithPhoneAndLink}
+              />
+            </View>
+          </TouchableWithoutFeedback>
+          {detailRecive && (
+            <Text
+              style={{
+                fontSize: 13,
+                marginHorizontal: 11,
+                marginVertical: 3,
+              }}>
+              <Text style={{fontWeight: '500'}}>Đã xem</Text> 14:55
+            </Text>
+          )}
         </View>
         <View>
-          <Text
-            style={{
-              alignSelf: 'center',
-              fontSize: 14,
-            }}>
-            14:25
-          </Text>
-          <View
-            style={{
-              backgroundColor: activeColor.backgroundMessage,
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingHorizontal: 11,
-              paddingVertical: 8,
-              borderRadius: 20,
-              alignSelf: 'flex-end',
-              marginEnd: 10,
-              marginTop: 5,
-              maxWidth: screenWidth * 0.7,
-            }}>
-            <Autolink
-              selectable={true}
+          {detailSend == true && (
+            <Text
               style={{
-                fontSize: 15,
-                color: activeColor.textMessage,
-              }}
-              text={textWithPhoneAndLink2}
-            />
-          </View>
-          <Text
-            style={{
-              fontSize: 14,
-              marginHorizontal: 11,
-              alignSelf: 'flex-end',
+                alignSelf: 'center',
+                fontSize: 13,
+                marginVertical: 3,
+              }}>
+              14:25
+            </Text>
+          )}
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setDetailSend(!detailSend);
             }}>
-            <Text style={{fontWeight: '500'}}>Đã xem</Text> 14:55
-          </Text>
+            <View
+              style={{
+                backgroundColor: activeColor.backgroundMessage,
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingHorizontal: 11,
+                paddingVertical: 8,
+                borderRadius: 20,
+                alignSelf: 'flex-end',
+                marginEnd: 10,
+                marginTop: 5,
+                maxWidth: screenWidth * 0.7,
+              }}>
+              <Autolink
+                selectable={true}
+                style={{
+                  fontSize: 15,
+                  color: activeColor.textMessage,
+                }}
+                text={textWithPhoneAndLink2}
+              />
+            </View>
+          </TouchableWithoutFeedback>
+
+          {detailSend == true && (
+            <Text
+              style={{
+                fontSize: 13,
+                marginHorizontal: 11,
+                alignSelf: 'flex-end',
+                marginVertical: 3,
+              }}>
+              <Text
+                style={{
+                  fontSize: 13,
+                  fontWeight: '500',
+                }}>
+                Đã xem
+              </Text>{' '}
+              14:55
+            </Text>
+          )}
         </View>
       </View>
       {hearts.map(item => (
@@ -293,143 +426,172 @@ const ChatRandom = props => {
         />
       ))}
 
-      {/* <View
-        style={{
-          height: screenHeight * 0.086,
-          flexDirection: 'row',
-          alignItems: 'center',
-          marginBottom: showKeyboard == true ? keyboardHeight : 0,
-        }}>
-        <Image
-          source={images.add_image}
-          style={{
-            height: screenHeight * 0.034,
-            width: screenHeight * 0.034,
-            marginHorizontal: 15,
-            tintColor: activeColor.infoColor,
-          }}
-        />
-        <TextInput
-          style={{
-            flex: 1,
-            borderRadius: 25,
-            borderWidth: 1,
-            borderColor: activeColor.borderTextInput,
-            paddingHorizontal: 20,
-            backgroundColor: activeColor.backgroundInput,
-            fontSize: 16,
-            fontWeight: '400',
-            marginBottom: 9,
-            marginTop: 9,
-          }}
-          placeholder="Nhập tin nhắn..."
-          placeholderTextColor={activeColor.textInput}
-        />
-        <TouchableOpacity
-          onPress={() => {
-            const numHeartsToAdd = 18; // Số lượng trái tim bạn muốn thêm
-            const newHearts = Array.from({length: numHeartsToAdd}, () => ({
-              id: getUniqueID(),
-              delay: Math.random() * 3100, // Độ trễ ngẫu nhiên từ 0ms đến 2000ms
-              size: (Math.floor(Math.random() * 10) + 1) * 2,
-            }));
-            setHearts([...hearts, ...newHearts]);
-          }}>
-          <Image
-            source={images.heart}
-            style={{
-              height: screenHeight * 0.038,
-              width: screenHeight * 0.038,
-              marginHorizontal: 15,
-              tintColor: activeColor.infoColor,
-            }}
-          />
-        </TouchableOpacity>
-        <Modal transparent visible={chooseLeave}>
-          <TouchableWithoutFeedback
-            onPress={() => {
-              setChooseLeave(false);
-            }}>
-            <View
-              style={{
-                flex: 1,
-              }}></View>
-          </TouchableWithoutFeedback>
-
-          <View
-            style={{
-              height: screenHeight * 0.086 + screenHeight * 0.038,
-              backgroundColor: '#ffffff',
-            }}>
-            <View
-              style={{
-                flex: 1,
-                borderBottomWidth: 0.2, // Độ dày của viền dưới
-                borderBottomColor: '#a8a8a8',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <Image
-                source={images.exit}
-                style={{
-                  height: screenHeight * 0.03,
-                  width: screenHeight * 0.03,
-                  marginHorizontal: 15,
-                }}
-              />
-              <Text>Thoát khỏi cuộc trò chuyện ẩn danh</Text>
-            </View>
-            <View
-              style={{
-                flex: 1,
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <Image
-                source={images.bookmark}
-                style={{
-                  height: screenHeight * 0.03,
-                  width: screenHeight * 0.03,
-                  marginHorizontal: 15,
-                }}
-              />
-              <Text
-                style={{
-                  fontSize: 14,
-                  color: '#7a7a7a',
-                }}>
-                Thêm vào yêu thích
-              </Text>
-            </View>
-          </View>
-        </Modal>
-      </View> */}
-      <View
-        style={{
-          height: screenHeight * 0.2,
-          width: screenWidth,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <Text
-          style={{
-            marginTop: 25,
-            alignSelf: 'center',
-            fontSize: 16,
-            fontWeight: '400',
-            color: activeColor.textColorTitle,
-            marginStart: 5,
-            opacity: 0.6,
-          }}>
-          Hãy bắt đầu một cuộc trò chuyện mới
-        </Text>
+      {startChat == true ? (
         <View
           style={{
-            height: 80,
-            with: 100,
-            backgroundColor: 'red',
-          }}></View>
-      </View>
+            height: screenHeight * 0.2,
+            width: screenWidth,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              marginTop: 25,
+              alignSelf: 'center',
+              fontSize: 16,
+              fontWeight: '400',
+              color: activeColor.textColorTitle,
+              marginStart: 5,
+              opacity: 0.6,
+            }}>
+            Hãy bắt đầu một cuộc trò chuyện mới
+          </Text>
+          <TouchableOpacity
+            onPress={() => {
+              setStartChat(false);
+            }}>
+            <View
+              style={{
+                height: screenHeight * 0.06,
+                width: screenWidth * 0.4,
+                backgroundColor: '#cd3cea',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginVertical: 15,
+              }}>
+              <Text
+                style={{
+                  fontSize: 15,
+                  textTransform: 'uppercase',
+                  color: '#f4f4f4',
+                  fontWeight: '500',
+                }}>
+                Bắt đầu chat
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <View
+          style={{
+            height: screenHeight * 0.086,
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginBottom: showKeyboard == true ? keyboardHeight : 0,
+          }}>
+          <TouchableOpacity
+            onPress={() => {
+              _handleButtonPress();
+              setShowUploadImg(!showUploadImg);
+              showKeyboard == true ? Keyboard.dismiss() : null;
+            }}>
+            <Image
+              source={images.add_image}
+              style={{
+                height: screenHeight * 0.034,
+                width: screenHeight * 0.034,
+                marginHorizontal: 15,
+                tintColor: activeColor.infoColor,
+              }}
+            />
+          </TouchableOpacity>
+
+          <TextInput
+            style={{
+              flex: 1,
+              borderRadius: 25,
+              borderWidth: 1,
+              borderColor: activeColor.borderTextInput,
+              paddingHorizontal: 20,
+              backgroundColor: activeColor.backgroundInput,
+              fontSize: 16,
+              fontWeight: '400',
+              marginBottom: 9,
+              marginTop: 9,
+            }}
+            placeholder="Nhập tin nhắn..."
+            placeholderTextColor={activeColor.textInput}
+          />
+          <TouchableOpacity
+            onPress={() => {
+              const numHeartsToAdd = 18; // Số lượng trái tim bạn muốn thêm
+              const newHearts = Array.from({length: numHeartsToAdd}, () => ({
+                id: getUniqueID(),
+                delay: Math.random() * 3100, // Độ trễ ngẫu nhiên từ 0ms đến 2000ms
+                size: (Math.floor(Math.random() * 10) + 1) * 2,
+              }));
+              setHearts([...hearts, ...newHearts]);
+            }}>
+            <Image
+              source={images.heart}
+              style={{
+                height: screenHeight * 0.038,
+                width: screenHeight * 0.038,
+                marginHorizontal: 15,
+                tintColor: activeColor.infoColor,
+              }}
+            />
+          </TouchableOpacity>
+          <Modal transparent visible={chooseLeave}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                setChooseLeave(false);
+              }}>
+              <View
+                style={{
+                  flex: 1,
+                }}></View>
+            </TouchableWithoutFeedback>
+
+            <View
+              style={{
+                height: screenHeight * 0.086 + screenHeight * 0.038,
+                backgroundColor: '#ffffff',
+              }}>
+              <View
+                style={{
+                  flex: 1,
+                  borderBottomWidth: 0.2, // Độ dày của viền dưới
+                  borderBottomColor: '#a8a8a8',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={images.exit}
+                  style={{
+                    height: screenHeight * 0.03,
+                    width: screenHeight * 0.03,
+                    marginHorizontal: 15,
+                  }}
+                />
+                <Text>Thoát khỏi cuộc trò chuyện ẩn danh</Text>
+              </View>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={images.bookmark}
+                  style={{
+                    height: screenHeight * 0.03,
+                    width: screenHeight * 0.03,
+                    marginHorizontal: 15,
+                  }}
+                />
+                <Text
+                  style={{
+                    fontSize: 14,
+                    color: '#7a7a7a',
+                  }}>
+                  Thêm vào yêu thích
+                </Text>
+              </View>
+            </View>
+          </Modal>
+        </View>
+      )}
 
       {visibilityNickname == true ? (
         <View
@@ -774,6 +936,19 @@ const ChatRandom = props => {
       ) : (
         <View></View>
       )}
+
+      <View
+        style={{
+          height: screenHeight * 0.37,
+          width: screenWidth,
+        }}>
+        <FlatList
+          data={photos}
+          keyExtractor={item => item.node.image.uri}
+          renderItem={renderPhoto}
+          numColumns={3} // Số cột
+        />
+      </View>
     </View>
   );
 };

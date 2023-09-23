@@ -196,7 +196,7 @@ const Login = props => {
                   style={{
                     marginStart: 14,
                     color: '#ffffff',
-                    fontSize: 15,
+                    fontSize: 14,
                     fontWeight: 'bold',
                     letterSpacing: 0.8,
                   }}>
@@ -239,7 +239,7 @@ const Login = props => {
                   style={{
                     marginStart: 14,
                     color: '#1e1e1e',
-                    fontSize: 15,
+                    fontSize: 14,
                     fontWeight: 'bold',
                     letterSpacing: 0.8,
                   }}>
