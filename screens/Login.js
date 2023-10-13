@@ -17,6 +17,7 @@ import {images} from '../constants';
 import {LoginManager, AccessToken, Profile} from 'react-native-fbsdk-next';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import axios from 'axios';
+import io from 'react-native-socket.io-client';
 
 export const CLI_ID_GOOGLE =
   Platform.OS == 'ios'
@@ -48,9 +49,26 @@ const Login = props => {
           console.log('Access Token:', accessToken);
 
           // Sau khi có Access Token, bạn có thể gửi nó đến máy chủ của bạn để xác thực đăng nhập.
+          try {
+            const response = await axios.post(
+              'https://chat.blwsmartware.net/api/auth/facebook',
+              {
+                access_token: accessToken,
+              },
+            );
 
-          // Sau khi xác thực thành công, bạn có thể chuyển hướng người dùng đến màn hình ChatRandom bằng hàm navigate.
-          navigate('ChatRandom');
+            if (response.data.status === 200) {
+              // Sau khi xác thực thành công,
+
+              navigate('ChatRandom');
+              // Đăng nhập thành công, lưu thông tin đăng nhập ở đây hoặc tiến hành các bước tiếp theo.
+              console.log(response.data.user.token);
+            } else {
+              console.error('Đăng nhập không thành công.');
+            }
+          } catch (error) {
+            console.error('Lỗi khi đăng nhập bằng Facebook:', error);
+          }
         }
       }
     } catch (error) {
@@ -64,7 +82,7 @@ const Login = props => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({email: email}), // Thay email_cua_ban@gmail.com bằng email thực sự
+        body: JSON.stringify({email: email}),
       });
 
       if (response.status === 200) {
@@ -80,6 +98,24 @@ const Login = props => {
 
   useEffect(() => {
     SplashScreen.hide();
+
+    const socket = io('http://blackwolves.info', {
+      query: {
+        token: 'AAA.BBB.CCC', // Đặt mã token của bạn ở đây
+      },
+    });
+
+    // Xử lý các sự kiện của Socket.io sau khi kết nối thành công
+    socket.on('connect', () => {
+      console.log('Kết nối thành công!');
+      // Gửi yêu cầu tìm đối tác
+      socket.emit('find-partner');
+    });
+
+    // Xử lý sự kiện khi nhận được tin nhắn mới
+    socket.on('new-message', data => {
+      console.log('Tin nhắn mới:', data);
+    });
 
     GoogleSignin.configure({
       webClientId: CLI_ID_GOOGLE,

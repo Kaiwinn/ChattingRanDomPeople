@@ -25,4 +25,5 @@ export default {
   user: require('../assets/user.png'),
   translate: require('../assets/translate.png'),
   dollar: require('../assets/dollar.png'),
+  photo1: require('../assets/photo1.jpg'),
 };

@@ -12,6 +12,7 @@ import {
   FlatList,
   Platform,
   PermissionsAndroid,
+  ScrollView,
 } from 'react-native';
 import React, {useCallback, useEffect, useState} from 'react';
 import {colors, images} from '../constants';
@@ -19,6 +20,8 @@ import AnimatedHeart from '../components/animated/AnimatedHeart';
 import SplashScreen from 'react-native-splash-screen';
 import Autolink from 'react-native-autolink';
 import {CameraRoll} from '@react-native-camera-roll/camera-roll';
+import Header from '../components/Header';
+import BottomChat from '../components/BottomChat';
 
 function getUniqueID() {
   return Math.floor(Math.random() * Date.now()).toString();
@@ -46,7 +49,6 @@ const ChatRandom = props => {
     const keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
       event => {
-        // Chiều cao của bàn phím là event.endCoordinates.height
         const keyboardHeight = event.endCoordinates.height;
 
         setKeyboardHeight(keyboardHeight);
@@ -66,8 +68,6 @@ const ChatRandom = props => {
       keyboardDidHideListener.remove();
     };
   }, []);
-
-  const [chooseLeave, setChooseLeave] = useState(false);
 
   const textWithPhoneAndLink =
     'Liên hệ qua số đt 1234567890 hoặc vào https://www.kai.com';
@@ -182,99 +182,18 @@ const ChatRandom = props => {
         width: screenWidth,
         backgroundColor: activeColor.background,
       }}>
-      <View
-        style={{
-          height: screenHeight * 0.083,
-          backgroundColor: activeColor.background,
-          shadowColor: activeColor.shadowColor,
-          shadowOffset: {
-            width: 0,
-            height: 1,
-          },
-          shadowOpacity: 0.5,
-          shadowRadius: 1,
-          elevation: 1,
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}>
-        <TouchableOpacity onPress={() => navigate('Setting')}>
-          <Image
-            source={images.talk}
-            style={{
-              height: screenHeight * 0.029,
-              width: screenHeight * 0.029,
-              marginHorizontal: 15,
-              marginVertical: 15,
-            }}
-          />
-        </TouchableOpacity>
-
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            flex: 1,
-          }}>
-          <Text
-            style={{
-              fontSize: 16,
-              fontWeight: '500',
-              color: activeColor.textColorTitle,
-              marginStart: 5,
-            }}>
-            Chat với người lạ
-          </Text>
-        </View>
-
-        <TouchableOpacity
-          onPress={() => {
-            setChooseLeave(true);
-          }}>
-          <Image
-            source={images.upload}
-            style={{
-              height: screenHeight * 0.036,
-              width: screenHeight * 0.036,
-              marginVertical: 5,
-              marginEnd: 5,
-              tintColor: activeColor.infoColor,
-            }}
-          />
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigate('Information')}>
-          <Image
-            source={images.information}
-            style={{
-              height: screenHeight * 0.036,
-              width: screenHeight * 0.036,
-              marginHorizontal: 8,
-              marginVertical: 5,
-              tintColor: activeColor.infoColor,
-            }}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => setVisibilityRP(!visibilityRP)}>
-          <Image
-            source={images.dots}
-            style={{
-              height: screenHeight * 0.04,
-              width: screenHeight * 0.04,
-              marginEnd: 8,
-              marginVertical: 5,
-              tintColor: activeColor.infoColor,
-            }}
-          />
-        </TouchableOpacity>
-      </View>
+      <Header
+        color={activeColor}
+        onPressRP={() => {
+          setVisibilityRP(!visibilityRP);
+        }}
+      />
 
       <View
         style={{
           height:
             showKeyboard == true
               ? screenHeight * 0.83 - keyboardHeight
-              : chooseLeave == true
-              ? screenHeight * 0.83 - screenHeight * 0.038
               : showUploadImg == true &&
                 startChat == false &&
                 showKeyboard == false
@@ -381,7 +300,6 @@ const ChatRandom = props => {
                 paddingVertical: 8,
                 borderRadius: 20,
                 alignSelf: 'flex-end',
-                marginEnd: 10,
                 marginTop: 5,
                 maxWidth: screenWidth * 0.7,
               }}>
@@ -414,6 +332,23 @@ const ChatRandom = props => {
               14:55
             </Text>
           )}
+        </View>
+
+        <View
+          style={{
+            width: screenWidth * 0.5,
+            alignSelf: 'flex-end',
+            marginHorizontal: 5,
+          }}>
+          <Image
+            source={images.photo1}
+            style={{
+              height: screenHeight * 0.25,
+              alignSelf: 'flex-end',
+              justifyContent: 'flex-end',
+              aspectRatio: 0.5,
+            }}
+          />
         </View>
       </View>
       {hearts.map(item => (
@@ -472,125 +407,24 @@ const ChatRandom = props => {
           </TouchableOpacity>
         </View>
       ) : (
-        <View
-          style={{
-            height: screenHeight * 0.086,
-            flexDirection: 'row',
-            alignItems: 'center',
-            marginBottom: showKeyboard == true ? keyboardHeight : 0,
-          }}>
-          <TouchableOpacity
-            onPress={() => {
-              _handleButtonPress();
-              setShowUploadImg(!showUploadImg);
-              showKeyboard == true ? Keyboard.dismiss() : null;
-            }}>
-            <Image
-              source={images.add_image}
-              style={{
-                height: screenHeight * 0.034,
-                width: screenHeight * 0.034,
-                marginHorizontal: 15,
-                tintColor: activeColor.infoColor,
-              }}
-            />
-          </TouchableOpacity>
-
-          <TextInput
-            style={{
-              flex: 1,
-              borderRadius: 25,
-              borderWidth: 1,
-              borderColor: activeColor.borderTextInput,
-              paddingHorizontal: 20,
-              backgroundColor: activeColor.backgroundInput,
-              fontSize: 16,
-              fontWeight: '400',
-              marginBottom: 9,
-              marginTop: 9,
-            }}
-            placeholder="Nhập tin nhắn..."
-            placeholderTextColor={activeColor.textInput}
-          />
-          <TouchableOpacity
-            onPress={() => {
-              const numHeartsToAdd = 18; // Số lượng trái tim bạn muốn thêm
-              const newHearts = Array.from({length: numHeartsToAdd}, () => ({
-                id: getUniqueID(),
-                delay: Math.random() * 3100, // Độ trễ ngẫu nhiên từ 0ms đến 2000ms
-                size: (Math.floor(Math.random() * 10) + 1) * 2,
-              }));
-              setHearts([...hearts, ...newHearts]);
-            }}>
-            <Image
-              source={images.heart}
-              style={{
-                height: screenHeight * 0.038,
-                width: screenHeight * 0.038,
-                marginHorizontal: 15,
-                tintColor: activeColor.infoColor,
-              }}
-            />
-          </TouchableOpacity>
-          <Modal transparent visible={chooseLeave}>
-            <TouchableWithoutFeedback
-              onPress={() => {
-                setChooseLeave(false);
-              }}>
-              <View
-                style={{
-                  flex: 1,
-                }}></View>
-            </TouchableWithoutFeedback>
-
-            <View
-              style={{
-                height: screenHeight * 0.086 + screenHeight * 0.038,
-                backgroundColor: '#ffffff',
-              }}>
-              <View
-                style={{
-                  flex: 1,
-                  borderBottomWidth: 0.2, // Độ dày của viền dưới
-                  borderBottomColor: '#a8a8a8',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  source={images.exit}
-                  style={{
-                    height: screenHeight * 0.03,
-                    width: screenHeight * 0.03,
-                    marginHorizontal: 15,
-                  }}
-                />
-                <Text>Thoát khỏi cuộc trò chuyện ẩn danh</Text>
-              </View>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  source={images.bookmark}
-                  style={{
-                    height: screenHeight * 0.03,
-                    width: screenHeight * 0.03,
-                    marginHorizontal: 15,
-                  }}
-                />
-                <Text
-                  style={{
-                    fontSize: 14,
-                    color: '#7a7a7a',
-                  }}>
-                  Thêm vào yêu thích
-                </Text>
-              </View>
-            </View>
-          </Modal>
-        </View>
+        <BottomChat
+          marginBottom={showKeyboard == true ? keyboardHeight : 0}
+          onPress1={() => {
+            _handleButtonPress();
+            setShowUploadImg(!showUploadImg);
+            showKeyboard == true ? Keyboard.dismiss() : null;
+          }}
+          activeColor={activeColor}
+          onPress2={() => {
+            const numHeartsToAdd = 18; // Số lượng trái tim bạn muốn thêm
+            const newHearts = Array.from({length: numHeartsToAdd}, () => ({
+              id: getUniqueID(),
+              delay: Math.random() * 3100, // Độ trễ ngẫu nhiên từ 0ms đến 2000ms
+              size: (Math.floor(Math.random() * 10) + 1) * 2,
+            }));
+            setHearts([...hearts, ...newHearts]);
+          }}
+        />
       )}
 
       {visibilityNickname == true ? (
