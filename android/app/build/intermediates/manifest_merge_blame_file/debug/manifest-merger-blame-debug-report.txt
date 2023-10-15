@@ -220,68 +220,27 @@
 121            android:value="false" />
 121-->[com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
 122
-123        <activity
-123-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
-124            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-124-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
-125            android:excludeFromRecents="true"
-125-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
-126            android:exported="false"
-126-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
-127            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-127-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
-128        <!--
-129            Service handling Google Sign-In user revocation. For apps that do not integrate with
-130            Google Sign-In, this service will never be started.
-131        -->
-132        <service
-132-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
-133            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-133-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
-134            android:exported="true"
-134-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
-135            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-135-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
-136            android:visibleToInstantApps="true" />
-136-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
-137
-138        <activity
-138-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-139            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-139-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-140            android:exported="false"
-140-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-141            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-141-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-142
-143        <meta-data
-143-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-144            android:name="com.google.android.gms.version"
-144-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-145            android:value="@integer/google_play_services_version" />
-145-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-146
-147        <provider
-147-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-148            android:name="androidx.startup.InitializationProvider"
-148-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-149            android:authorities="com.chattingrandompeople.androidx-startup"
-149-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-150            android:exported="false" >
-150-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-151            <meta-data
-151-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-152                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-152-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-153                android:value="androidx.startup" />
-153-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-154            <meta-data
-154-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-155                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-155-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-156                android:value="androidx.startup" />
-156-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-157        </provider>
-158    </application>
-159
-160</manifest>
+123        <provider
+123-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+124            android:name="androidx.startup.InitializationProvider"
+124-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+125            android:authorities="com.chattingrandompeople.androidx-startup"
+125-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+126            android:exported="false" >
+126-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+127            <meta-data
+127-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+128                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+128-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+129                android:value="androidx.startup" />
+129-->[androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+130            <meta-data
+130-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+131                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+131-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+132                android:value="androidx.startup" />
+132-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+133        </provider>
+134    </application>
+135
+136</manifest>

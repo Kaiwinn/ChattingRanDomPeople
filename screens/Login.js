@@ -15,14 +15,8 @@ import SplashScreen from 'react-native-splash-screen';
 import React, {useEffect, useState} from 'react';
 import {images} from '../constants';
 import {LoginManager, AccessToken, Profile} from 'react-native-fbsdk-next';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import axios from 'axios';
 import io from 'react-native-socket.io-client';
-
-export const CLI_ID_GOOGLE =
-  Platform.OS == 'ios'
-    ? ''
-    : '966244274464-0o900ug0jbv93l206uks27qnc3ht4ijh.apps.googleusercontent.com';
 
 const Login = props => {
   const {navigation, route} = props;
@@ -47,8 +41,6 @@ const Login = props => {
         if (data) {
           const {accessToken} = data;
           console.log('Access Token:', accessToken);
-
-          // Sau khi có Access Token, bạn có thể gửi nó đến máy chủ của bạn để xác thực đăng nhập.
           try {
             const response = await axios.post(
               'https://chat.blwsmartware.net/api/auth/facebook',
@@ -98,34 +90,7 @@ const Login = props => {
 
   useEffect(() => {
     SplashScreen.hide();
-
-    const socket = io('http://blackwolves.info', {
-      query: {
-        token: 'AAA.BBB.CCC', // Đặt mã token của bạn ở đây
-      },
-    });
-
-    // Xử lý các sự kiện của Socket.io sau khi kết nối thành công
-    socket.on('connect', () => {
-      console.log('Kết nối thành công!');
-      // Gửi yêu cầu tìm đối tác
-      socket.emit('find-partner');
-    });
-
-    // Xử lý sự kiện khi nhận được tin nhắn mới
-    socket.on('new-message', data => {
-      console.log('Tin nhắn mới:', data);
-    });
-
-    GoogleSignin.configure({
-      webClientId: CLI_ID_GOOGLE,
-    });
   });
-
-  const actionCodeSettings = {
-    url: 'https://chattingrandompeople.firebaseapp.com/emailSignInSuccess',
-    handleCodeInApp: true,
-  };
 
   return (
     <SafeAreaView>

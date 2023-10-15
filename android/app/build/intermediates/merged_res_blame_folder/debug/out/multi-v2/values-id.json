@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.chattingrandompeople.app-mergeDebugResources-39:/values-id/values-id.xml",
+            "outputFile": "com.chattingrandompeople.app-mergeDebugResources-36:/values-id/values-id.xml",
             "map": [
                 {
                     "source": "C:\\Users\\TTC\\.gradle\\caches\\transforms-3\\2c82ee34fa7031a8c778af0a1fe85334\\transformed\\jetified-facebook-common-15.2.0\\res\\values-id\\values-id.xml",

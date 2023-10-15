@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.chattingrandompeople.app-mergeDebugResources-39:/values-v21/values-v21.xml",
+            "outputFile": "com.chattingrandompeople.app-mergeDebugResources-36:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\TTC\\.gradle\\caches\\transforms-3\\97479bfdfadceaf3900a725749168427\\transformed\\material-1.1.0\\res\\values-v21\\values-v21.xml",

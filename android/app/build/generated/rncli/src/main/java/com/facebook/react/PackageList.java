@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // @react-native-camera-roll/camera-roll
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
-// @react-native-google-signin/google-signin
-import com.reactnativegooglesignin.RNGoogleSigninPackage;
 // react-native-fbsdk-next
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // react-native-gesture-handler
@@ -74,7 +72,6 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
       new CameraRollPackage(),
-      new RNGoogleSigninPackage(),
       new FBSDKPackage(),
       new RNGestureHandlerPackage(),
       new SafeAreaContextPackage(),

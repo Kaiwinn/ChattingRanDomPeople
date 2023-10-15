@@ -10,7 +10,6 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\TTC\.g
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:8:1-18:12
 MERGED from [:react-native-async-storage_async-storage] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-camera-roll_camera-roll] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-camera-roll\camera-roll\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-google-signin_google-signin] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-fbsdk-next] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-fbsdk-next\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:1-26:12
 MERGED from [:react-native-gesture-handler] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -54,12 +53,6 @@ MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\TTC\.gradle\caches\tra
 MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\TTC\.gradle\caches\transforms-3\f79c237c79b703ff38c1ec52c5c9658c\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\TTC\.gradle\caches\transforms-3\70fe9ca858c7a6828c380a239290c4b4\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\f2b8f56b8cadd072fd3ad60af63d3a96\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] C:\Users\TTC\.gradle\caches\transforms-3\db7f9602144786a6af68c5a42716f41c\transformed\jetified-play-services-auth-api-phone-17.0.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d951b484f0757b58cc78c136f56b41e4\transformed\jetified-play-services-auth-base-17.0.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\TTC\.gradle\caches\transforms-3\be45e23de239ed1012929a3a568a4152\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\7283e8f066468ff966bf9787e924e607\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\TTC\.gradle\caches\transforms-3\8abca60907b3a2bfe9111d62b521221e\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\TTC\.gradle\caches\transforms-3\2f7e390a773be7d033fc665239c43b2c\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
@@ -75,13 +68,13 @@ MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\TTC\.gradle\caches\transform
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\6caea60dcb83112d8959fb6457c74899\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\125a9cc8657fc6eaace20be6d05f2c89\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\308d759ccb1e24a1e30d9356a7771208\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d35374bf03b1994bdefcccaafdb8a159\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\fc7cbcf33fc25274b83ba33ce0735937\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\e8a186f08dbd58689d27d974740139ff\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\5b84e1565c6bf3be73cea7dff96a5008\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\686864aee059e8399d5e95092734a980\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\c33db9b9c599d59287030047534da7b6\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\TTC\.gradle\caches\transforms-3\3b5ba0c847833d2a33f33bb0dc121b07\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d35374bf03b1994bdefcccaafdb8a159\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\fc7cbcf33fc25274b83ba33ce0735937\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\493694cb1fbdc8c468f00929068e4625\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\0e91c44d1633c3c799353cda8e643cf8\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.7.0] C:\Users\TTC\.gradle\caches\transforms-3\d949d9c7f1fdb91a6021a71803319832\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
@@ -169,14 +162,6 @@ MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\
 MERGED from [com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\97479bfdfadceaf3900a725749168427\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\97479bfdfadceaf3900a725749168427\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\TTC\.gradle\caches\transforms-3\be45e23de239ed1012929a3a568a4152\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\TTC\.gradle\caches\transforms-3\be45e23de239ed1012929a3a568a4152\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
@@ -310,8 +295,6 @@ MERGED from [:react-native-async-storage_async-storage] D:\reactnative\ChattingR
 MERGED from [:react-native-async-storage_async-storage] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-camera-roll_camera-roll] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-camera-roll\camera-roll\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-camera-roll_camera-roll] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-camera-roll\camera-roll\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:react-native-google-signin_google-signin] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:react-native-google-signin_google-signin] D:\reactnative\ChattingRanDomPeople\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-fbsdk-next] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-fbsdk-next\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:5-44
 MERGED from [:react-native-fbsdk-next] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-fbsdk-next\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:5-44
 MERGED from [:react-native-gesture-handler] D:\reactnative\ChattingRanDomPeople\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
@@ -398,18 +381,6 @@ MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\TTC\.gradle\
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\TTC\.gradle\caches\transforms-3\70fe9ca858c7a6828c380a239290c4b4\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\f2b8f56b8cadd072fd3ad60af63d3a96\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\f2b8f56b8cadd072fd3ad60af63d3a96\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] C:\Users\TTC\.gradle\caches\transforms-3\db7f9602144786a6af68c5a42716f41c\transformed\jetified-play-services-auth-api-phone-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] C:\Users\TTC\.gradle\caches\transforms-3\db7f9602144786a6af68c5a42716f41c\transformed\jetified-play-services-auth-api-phone-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d951b484f0757b58cc78c136f56b41e4\transformed\jetified-play-services-auth-base-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d951b484f0757b58cc78c136f56b41e4\transformed\jetified-play-services-auth-base-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\TTC\.gradle\caches\transforms-3\be45e23de239ed1012929a3a568a4152\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\TTC\.gradle\caches\transforms-3\be45e23de239ed1012929a3a568a4152\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\7283e8f066468ff966bf9787e924e607\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\7283e8f066468ff966bf9787e924e607\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\TTC\.gradle\caches\transforms-3\8abca60907b3a2bfe9111d62b521221e\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
@@ -440,10 +411,6 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TTC
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\125a9cc8657fc6eaace20be6d05f2c89\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\308d759ccb1e24a1e30d9356a7771208\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\308d759ccb1e24a1e30d9356a7771208\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d35374bf03b1994bdefcccaafdb8a159\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d35374bf03b1994bdefcccaafdb8a159\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\fc7cbcf33fc25274b83ba33ce0735937\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\fc7cbcf33fc25274b83ba33ce0735937\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\e8a186f08dbd58689d27d974740139ff\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\e8a186f08dbd58689d27d974740139ff\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\TTC\.gradle\caches\transforms-3\5b84e1565c6bf3be73cea7dff96a5008\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -454,6 +421,10 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\TTC\.gradle\caches\t
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\c33db9b9c599d59287030047534da7b6\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\TTC\.gradle\caches\transforms-3\3b5ba0c847833d2a33f33bb0dc121b07\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\TTC\.gradle\caches\transforms-3\3b5ba0c847833d2a33f33bb0dc121b07\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d35374bf03b1994bdefcccaafdb8a159\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\d35374bf03b1994bdefcccaafdb8a159\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\fc7cbcf33fc25274b83ba33ce0735937\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\fc7cbcf33fc25274b83ba33ce0735937\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\493694cb1fbdc8c468f00929068e4625\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\493694cb1fbdc8c468f00929068e4625\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\0e91c44d1633c3c799353cda8e643cf8\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
@@ -572,40 +543,6 @@ ADDED from [com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\t
 		ADDED from [com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
 	android:name
 		ADDED from [com.facebook.soloader:soloader:0.10.5] C:\Users\TTC\.gradle\caches\transforms-3\9271ca2272cf3b290ee2bf0706293a41\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
-activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
-	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
-service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
-	android:visibleToInstantApps
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
-	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\TTC\.gradle\caches\transforms-3\0724ebfd4960dfaed2c080c5ba991e59\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\075f83ba5206d20b39b3eca80fd2ca80\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\TTC\.gradle\caches\transforms-3\431881102d33aeaf0ec0e5eeec613cdd\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\TTC\.gradle\caches\transforms-3\74734163d01c6b323b4061918ff452f7\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\TTC\.gradle\caches\transforms-3\065882068272df57dd639b917504fe5a\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20

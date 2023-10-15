@@ -19,7 +19,7 @@ const Stack = () => {
     <NavigationContainer>
       <Provider store={store}>
         <Stack.Navigator
-          initialRouteName="ChatRandom"
+          initialRouteName="Login"
           screenOptions={{
             headerShown: false,
           }}>
