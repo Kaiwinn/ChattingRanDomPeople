@@ -2,6 +2,7 @@ import {
   Dimensions,
   Image,
   Modal,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -11,8 +12,7 @@ import {
 import React, {useEffect, useState} from 'react';
 import {colors, images} from '../constants';
 import {useDispatch, useSelector} from 'react-redux';
-import {changeColor} from '../redux/Reducer';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {changeColor, getColor} from '../redux/Reducer';
 
 const Setting = props => {
   const {navigation, route} = props;
@@ -26,22 +26,26 @@ const Setting = props => {
     },
     {
       id: 2,
-      name: 'Giao diện',
+      name: 'Nhiệm vụ',
     },
     {
       id: 3,
-      name: 'Ngôn ngữ',
+      name: 'Giao diện',
     },
     {
       id: 4,
-      name: 'Confession',
+      name: 'Ngôn ngữ',
     },
     {
       id: 5,
-      name: 'Trợ giúp',
+      name: 'Cộng đồng Facebook',
     },
     {
       id: 6,
+      name: 'Trợ giúp',
+    },
+    {
+      id: 7,
       name: 'Thông tin',
     },
   ]);
@@ -52,17 +56,7 @@ const Setting = props => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    AsyncStorage.getItem('selectedColor')
-      .then(color => {
-        if (color) {
-          dispatch(changeColor(color));
-        }
-      })
-      .catch(error =>
-        console.error('Error loading color from AsyncStorage:', error),
-      );
-  }, [dispatch]);
+  useEffect(() => {}, [dispatch]);
 
   return (
     <View
@@ -178,7 +172,7 @@ const Setting = props => {
             </Text>
           </View>
         </View>
-        <View
+        <ScrollView
           style={{
             height: screenHeight * 0.58,
           }}>
@@ -186,7 +180,7 @@ const Setting = props => {
             <View key={index}>
               <TouchableOpacity
                 onPress={() => {
-                  item.id == 2 ? setVisibleInterface(true) : '';
+                  item.name == 'Giao diện' ? setVisibleInterface(true) : '';
                 }}>
                 <View
                   style={{
@@ -199,14 +193,16 @@ const Setting = props => {
                       item.id == 1
                         ? images.individual
                         : item.id == 2
-                        ? images.moon
+                        ? images.mission
                         : item.id == 3
-                        ? images.translate
+                        ? images.moon
                         : item.id == 4
-                        ? images.mail
+                        ? images.translate
                         : item.id == 5
-                        ? images.help
+                        ? images.mail
                         : item.id == 6
+                        ? images.help
+                        : item.id == 7
                         ? images.info
                         : images.default
                     }
@@ -267,7 +263,7 @@ const Setting = props => {
               </Text>
             </View>
           </TouchableOpacity>
-        </View>
+        </ScrollView>
       </View>
 
       <Modal transparent visible={visibleInterface}>

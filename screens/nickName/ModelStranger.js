@@ -10,7 +10,7 @@ import {
 import React from 'react';
 
 const ModelStranger = props => {
-  const {onPressClose, activeColor} = props;
+  const {onPressClose} = props;
 
   const screenWidth = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
@@ -76,14 +76,14 @@ const ModelStranger = props => {
               marginHorizontal: 20,
             }}
             placeholder="Người lạ"
-            placeholderTextColor={activeColor.textInput}
+            placeholderTextColor={colors[THEME].textInput}
           />
           <View
             style={{
               marginHorizontal: 20,
               height: 2,
               width: screenWidth * 0.9 - 40,
-              backgroundColor: activeColor.textInput,
+              backgroundColor: colors[THEME].textInput,
               opacity: 0.5,
             }}></View>
           <View

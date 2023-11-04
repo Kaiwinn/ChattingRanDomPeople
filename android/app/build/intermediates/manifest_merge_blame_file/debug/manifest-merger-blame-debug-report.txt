@@ -9,23 +9,23 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:5:5-77
-11-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:5:22-75
+11-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:3:5-67
-12-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:3:22-64
+12-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:3:5-67
+12-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:3:22-64
 13    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-13-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:4:5-76
-13-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:4:22-73
+13-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:4:5-76
+13-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:4:22-73
 14    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-14-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:5-75
-14-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:22-72
+14-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:5-75
+14-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:5:22-72
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:5-80
-15-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:22-77
+15-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:5-80
+15-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:6:22-77
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:5-81
-16-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:22-78
+16-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:5-81
+16-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:7:22-78
 17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 17-->[com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
 17-->[com.facebook.flipper:flipper:0.182.0] C:\Users\TTC\.gradle\caches\transforms-3\69d93768e433d35035f15213259d94cc\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
@@ -45,124 +45,124 @@
 24-->[com.android.installreferrer:installreferrer:1.0] C:\Users\TTC\.gradle\caches\transforms-3\dbc6fafbe893e35d481ea50a8e3fdd15\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
 25
 26    <application
-26-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:9:5-47:19
+26-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:9:5-47:19
 27        android:name="com.chattingrandompeople.MainApplication"
-27-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:11:7-38
+27-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:11:7-38
 28        android:allowBackup="false"
-28-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:15:7-34
+28-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:15:7-34
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 29-->[androidx.core:core:1.7.0] C:\Users\TTC\.gradle\caches\transforms-3\d949d9c7f1fdb91a6021a71803319832\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 30        android:debuggable="true"
 31        android:icon="@mipmap/ic_launcher"
-31-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:13:7-41
+31-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:13:7-41
 32        android:label="@string/app_name"
-32-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:12:7-39
+32-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:12:7-39
 33        android:requestLegacyExternalStorage="true"
-33-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:10:7-50
+33-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:10:7-50
 34        android:roundIcon="@mipmap/ic_launcher_round"
-34-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:14:7-52
+34-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:14:7-52
 35        android:supportsRtl="true"
 35-->[com.facebook.android:facebook-android-sdk:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\8209f98567b429800ddeb2971946d787\transformed\jetified-facebook-android-sdk-15.2.0\AndroidManifest.xml:16:18-44
 36        android:theme="@style/AppTheme"
-36-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:16:7-38
+36-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:16:7-38
 37        android:usesCleartextTraffic="true" >
-37-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:8:9-44
+37-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:8:9-44
 38        <activity
-38-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:9-111
+38-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:9-111
 39            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-39-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:19-83
+39-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:19-83
 40            android:exported="false" />
-40-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:84-108
+40-->D:\reactnative\ChattingRanDomPeople\android\app\src\debug\AndroidManifest.xml:11:84-108
 41
 42        <meta-data
-42-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:7-105
+42-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:7-105
 43            android:name="com.facebook.sdk.ApplicationId"
-43-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:18-63
+43-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:18-63
 44            android:value="@string/facebook_app_id" />
-44-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:64-103
+44-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:17:64-103
 45        <meta-data
-45-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:7-109
+45-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:7-109
 46            android:name="com.facebook.sdk.ClientToken"
-46-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:18-61
+46-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:18-61
 47            android:value="@string/facebook_client_token" />
-47-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:62-107
+47-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:18:62-107
 48
 49        <activity
-49-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:7-23:44
+49-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:7-23:44
 50            android:name="com.facebook.FacebookActivity"
-50-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:17-61
+50-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:20:17-61
 51            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-51-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:21:9-109
+51-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:21:9-109
 52            android:label="@string/app_name"
-52-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:9-41
+52-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:23:9-41
 53            android:theme="@style/com_facebook_activity_theme" />
 53-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:25:13-63
 54        <activity
-54-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:7-33:18
+54-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:24:7-33:18
 55            android:name="com.facebook.CustomTabActivity"
-55-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:9-54
+55-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:25:9-54
 56            android:exported="true" >
-56-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:9-32
+56-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:26:9-32
 57            <intent-filter>
-57-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:27:9-32:25
+57-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:27:9-32:25
 58                <action android:name="android.intent.action.VIEW" />
-58-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:13-65
-58-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:21-62
+58-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:13-65
+58-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:21-62
 59
 60                <category android:name="android.intent.category.DEFAULT" />
-60-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:13-72
-60-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:23-69
+60-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:13-72
+60-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:23-69
 61                <category android:name="android.intent.category.BROWSABLE" />
-61-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:13-74
-61-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:23-71
+61-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:13-74
+61-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:23-71
 62
 63                <data android:scheme="@string/fb_login_protocol_scheme" />
-63-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:13-71
-63-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:19-68
+63-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:13-71
+63-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:19-68
 64            </intent-filter>
 65            <intent-filter>
 65-->[com.facebook.android:facebook-common:15.2.0] C:\Users\TTC\.gradle\caches\transforms-3\2c82ee34fa7031a8c778af0a1fe85334\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:31:13-40:29
 66                <action android:name="android.intent.action.VIEW" />
-66-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:13-65
-66-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:21-62
+66-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:13-65
+66-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:28:21-62
 67
 68                <category android:name="android.intent.category.DEFAULT" />
-68-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:13-72
-68-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:23-69
+68-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:13-72
+68-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:29:23-69
 69                <category android:name="android.intent.category.BROWSABLE" />
-69-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:13-74
-69-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:23-71
+69-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:13-74
+69-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:30:23-71
 70
 71                <data
-71-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:13-71
+71-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:13-71
 72                    android:host="cct.com.chattingrandompeople"
 73                    android:scheme="fbconnect" />
-73-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:19-68
+73-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:31:19-68
 74            </intent-filter>
 75        </activity>
 76        <activity
-76-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:35:7-46:18
+76-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:35:7-46:18
 77            android:name="com.chattingrandompeople.MainActivity"
-77-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:36:9-37
+77-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:36:9-37
 78            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-78-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:38:9-118
+78-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:38:9-118
 79            android:exported="true"
-79-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:41:9-32
+79-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:41:9-32
 80            android:label="@string/app_name"
-80-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:37:9-41
+80-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:37:9-41
 81            android:launchMode="singleTask"
-81-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:39:9-40
+81-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:39:9-40
 82            android:windowSoftInputMode="adjustResize" >
-82-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:40:9-51
+82-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:40:9-51
 83            <intent-filter>
-83-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:42:9-45:25
+83-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:42:9-45:25
 84                <action android:name="android.intent.action.MAIN" />
-84-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:43:13-65
-84-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:43:21-62
+84-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:43:13-65
+84-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:43:21-62
 85
 86                <category android:name="android.intent.category.LAUNCHER" />
-86-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:44:13-73
-86-->C:\Users\TTC\OneDrive\Documents\GITHUB\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:44:23-70
+86-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:44:13-73
+86-->D:\reactnative\ChattingRanDomPeople\android\app\src\main\AndroidManifest.xml:44:23-70
 87            </intent-filter>
 88        </activity>
 89        <activity android:name="com.facebook.CustomTabMainActivity" />

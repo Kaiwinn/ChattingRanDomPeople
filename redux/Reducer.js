@@ -15,9 +15,20 @@ export const Reducer = createSlice({
           console.error('Error saving color to AsyncStorage:', error),
         );
     },
+    getColor: state => {
+      AsyncStorage.getItem('selectedColor')
+        .then(value => {
+          if (value) {
+            state.color = value;
+          }
+        })
+        .catch(error =>
+          console.error('Error getting color from AsyncStorage:', error),
+        );
+    },
   },
 });
 
-export const {changeColor} = Reducer.actions;
+export const {changeColor, getColor} = Reducer.actions;
 
 export default Reducer.reducer;

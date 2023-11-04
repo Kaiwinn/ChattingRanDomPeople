@@ -26,4 +26,6 @@ export default {
   translate: require('../assets/translate.png'),
   dollar: require('../assets/dollar.png'),
   photo1: require('../assets/photo1.jpg'),
+  send: require('../assets/send.png'),
+  mission: require('../assets/mission.png'),
 };

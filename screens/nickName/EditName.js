@@ -10,7 +10,7 @@ import React from 'react';
 import {images} from '../../constants';
 
 const EditName = props => {
-  const {activeColor, onPressStranger, onPressYou, onPressBack} = props;
+  const {onPressStranger, onPressYou, onPressBack} = props;
 
   const screenWidth = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
@@ -26,8 +26,8 @@ const EditName = props => {
       <View
         style={{
           height: screenHeight * 0.083,
-          backgroundColor: activeColor.background,
-          shadowColor: activeColor.shadowColor,
+          backgroundColor: colors[THEME].background,
+          shadowColor: colors[THEME].shadowColor,
           shadowOffset: {
             width: 0,
             height: 1,
@@ -53,7 +53,7 @@ const EditName = props => {
           style={{
             fontSize: 16,
             fontWeight: '500',
-            color: activeColor.textColorTitle,
+            color: colors[THEME].textColorTitle,
             marginStart: 5,
           }}>
           Chỉnh sửa biệt danh
@@ -64,7 +64,7 @@ const EditName = props => {
           paddingTop: 10,
           height: screenHeight * 0.129,
           width: screenWidth,
-          backgroundColor: activeColor.background,
+          backgroundColor: colors[THEME].background,
         }}>
         <TouchableOpacity
           onPress={onPressStranger}
@@ -79,7 +79,7 @@ const EditName = props => {
               style={{
                 fontSize: 14,
                 fontWeight: '500',
-                color: activeColor.textColorTitle,
+                color: colors[THEME].textColorTitle,
               }}>
               Đặt biệt danh
             </Text>
@@ -106,7 +106,7 @@ const EditName = props => {
               style={{
                 fontSize: 14,
                 fontWeight: '500',
-                color: activeColor.textColorTitle,
+                color: colors[THEME].textColorTitle,
               }}>
               Đặt biệt danh
             </Text>

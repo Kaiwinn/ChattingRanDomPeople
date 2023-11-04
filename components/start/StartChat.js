@@ -6,10 +6,11 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
+import {useSelector} from 'react-redux';
 
 const StartChat = props => {
-  const {activeColor, onPressStart} = props;
-
+  const {onPressStart} = props;
+  const THEME = useSelector(state => state.theme.color);
   const screenWidth = Dimensions.get('window').width;
   const screenHeight = Dimensions.get('window').height;
   return (
@@ -26,7 +27,7 @@ const StartChat = props => {
           alignSelf: 'center',
           fontSize: 16,
           fontWeight: '400',
-          color: activeColor.textColorTitle,
+          color: colors[THEME].textColorTitle,
           marginStart: 5,
           opacity: 0.6,
         }}>
